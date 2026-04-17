@@ -27,6 +27,12 @@ anyhow = "1"
 esp-idf-svc = { version = "0.52.1", features = ["critical-section", "embassy-time-driver", "embassy-sync"] }
 # Remove `generic-queue-8` if you plan to use `embassy-time` WITH `embassy-executor`
 embassy-time = { version = "0.5", features = ["generic-queue-8"] }
+# 1-Wire + DS18B20 drivers (embedded-hal 0.2 API; esp-idf-hal provides the 0.2 compat).
+one-wire-bus = "0.1"
+ds18b20 = "0.1"
+# Needed directly because we reference the 0.2 `InputPin`/`OutputPin` traits in
+# trait bounds of our helper fn. Transitive deps aren't visible to `use`.
+embedded-hal = "0.2"
 
 [build-dependencies]
 embuild = "0.33"
