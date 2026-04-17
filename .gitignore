@@ -1,0 +1,15 @@
+# IDE / editor
+.idea/
+.vscode/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Fallback for any cargo project in this repo — temp_monitor/.gitignore already covers its own.
+**/target/
+**/.embuild/
+
+# Datasheet text extractions — the PDFs are the source of truth; .txt files are re-generated
+# with `pdftotext -layout FILE.pdf FILE.txt` as needed. Keep the repo small.
+/docs/hardware/datasheets/*.txt

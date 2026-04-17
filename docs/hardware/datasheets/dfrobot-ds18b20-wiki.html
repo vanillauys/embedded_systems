@@ -1,0 +1,645 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+  <head >
+    <meta  charset="utf-8"><meta  name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta  name="apple-mobile-web-app-capable" content="yes"><meta  data-hid="robots" name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta  data-hid="keywords" name="keywords" content="DS18B20 waterproof sensor, digital temperature sensor, 1-Wire temperature sensor, Arduino temperature sensor, smart home temperature sensor, temperature measurement sensor, connect DS18B20 to Arduino, best waterproof temperature sensor for greenhouse, DS18B20 sensor for smart home automation, DIY electronics enthusiasts, smart home automation developers, environmental monitoring tools, educational electronics kits"><meta  data-hid="description" name="description" content="Explore the Waterproof DS18B20 Digital Temperature Sensor for Arduino, featuring IP68 waterproof rating and a temperature range of -10°C to +85°C. Ideal for smart home, environmental monitoring, and educational projects. Learn how to connect and use this sensor with Arduino through tutorials and examples. Discover best practices and comparison with other sensors. Start your project with DS18B20 today!"><meta  data-hid="og:locale" property="og:locale" content="en_US"><meta  data-hid="og:type" property="og:type" content="website"><meta  data-hid="og:title" property="og:title" content="Discover Versatile DS18B20 Sensor for Arduino - IP68 Protection ?️"><meta  data-hid="og:description" property="og:description" content="Enhance your projects with the Waterproof DS18B20 Sensor, compatible with Arduino. Perfect for smart home, environmental monitoring, and educational use. Explore tutorials and start innovating today!"><meta  data-hid="og:url" property="og:url" content="https://wiki.dfrobot.com/dfr0198"><meta  data-hid="og:site_name" property="og:site_name" content="Waterproof DS18B20 Sensor for Arduino - IP68 &amp; Versatile Applications | DFRobot Wiki"><meta  data-hid="og:image" property="og:image" content="https://dfimg.dfrobot.com/enshop/image/data/DFR0198/DFR0198_Main_01_1200x630.jpg.webp"><meta  data-hid="og:image:alt" property="og:image:alt" content="Angled shot of waterproof DS18B20 temperature sensor with coiled cable and colored wires.-DFRobot product sku:DFR0198 image."><meta  data-hid="twitter:card" property="twitter:card" content="summary_large_image"><meta  data-hid="twitter:site" property="twitter:site" content="@wiki"><meta  data-hid="twitter:creator" property="twitter:creator" content="@wiki"><meta  data-hid="twitter:title" property="twitter:title" content="Discover Versatile DS18B20 Sensor for Arduino - IP68 Protection ?️"><meta  data-hid="twitter:description" property="twitter:description" content="Enhance your projects with the Waterproof DS18B20 Sensor, compatible with Arduino. Perfect for smart home, environmental monitoring, and educational use. Explore tutorials and start innovating today!"><meta  data-hid="twitter:image" property="twitter:image" content="https://dfimg.dfrobot.com/enshop/image/data/DFR0198/DFR0198_Main_01_1200x630.jpg.webp"><meta  data-hid="twitter:image:alt" property="twitter:image:alt" content="Angled shot of waterproof DS18B20 temperature sensor with coiled cable and colored wires.-DFRobot product sku:DFR0198 image."><title>Waterproof DS18B20 Sensor for Arduino - IP68 &amp; Versatile Applications | DFRobot Wiki</title><base href="/"><link  rel="canonical" href="https://wiki.dfrobot.com/dfr0198/"><link  rel="stylesheet" href="/css/pc.css"><link  rel="stylesheet" href="/libs/swiper/swiper-bundle.min.css"><style data-n-head="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+.v-application .primary--text {
+  color: #1976d2 !important;
+  caret-color: #1976d2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff !important;
+  border-color: #c7fdff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff !important;
+  caret-color: #c7fdff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff !important;
+  border-color: #a8e0ff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff !important;
+  caret-color: #a8e0ff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff !important;
+  border-color: #8ac5ff !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff !important;
+  caret-color: #8ac5ff !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff !important;
+  border-color: #6aaaff !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff !important;
+  caret-color: #6aaaff !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef !important;
+  border-color: #488fef !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef !important;
+  caret-color: #488fef !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6 !important;
+  border-color: #005eb6 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6 !important;
+  caret-color: #005eb6 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b !important;
+  border-color: #00479b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b !important;
+  caret-color: #00479b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180 !important;
+  border-color: #003180 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180 !important;
+  caret-color: #003180 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67 !important;
+  border-color: #001e67 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67 !important;
+  caret-color: #001e67 !important;
+}
+.v-application .secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}
+.v-application .secondary--text {
+  color: #424242 !important;
+  caret-color: #424242 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1 !important;
+  border-color: #c1c1c1 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1 !important;
+  caret-color: #c1c1c1 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b !important;
+  border-color: #8b8b8b !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b !important;
+  caret-color: #8b8b8b !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272 !important;
+  border-color: #727272 !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272 !important;
+  caret-color: #727272 !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959 !important;
+  border-color: #595959 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959 !important;
+  caret-color: #595959 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c !important;
+  caret-color: #2c2c2c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717 !important;
+  border-color: #171717 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717 !important;
+  caret-color: #171717 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style><script  src="/common/md5.min.js" ssr="true"></script><script  src="/common/jquery-2.1.1.min.js" ssr="true"></script><script  src="https://www.googletagmanager.com/gtag/js?id=G-KEFMZ0P9J0" ssr="false" async></script><script  src="/libs/gtag.js" ssr="false" async></script><script  type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://wiki.dfrobot.com/DFR0198/#article","headline":"Waterproof DS18B20 Sensor for Arduino - IP68 &amp; Versatile Applications | DFRobot Wiki","description":"DS18B20 Waterproof Sensor ensures reliability for Arduino projects. Discover its versatile applications in smart homes and environmental monitoring.","keywords":["DS18B20 waterproof sensor"," digital temperature sensor"," 1-Wire temperature sensor"," Arduino temperature sensor"," smart home temperature sensor"," temperature measurement sensor"," connect DS18B20 to Arduino"," best waterproof temperature sensor for greenhouse"," DS18B20 sensor for smart home automation"," DIY electronics enthusiasts"," smart home automation developers"," environmental monitoring tools"," educational electronics kits"],"image":{"@id":"https://wiki.dfrobot.com/DFR0198/#mainimage"},"dateModified":"2025-12-01","author":{"@id":"https://wiki.dfrobot.com/#organization"},"publisher":{"@id":"https://wiki.dfrobot.com/#organization"},"speakable":{"@type":"SpeakableSpecification","cssSelector":[".wiki-introduction .desc"]},"subjectOf":[{"@type":"DigitalDocument","name":"Datasheet","url":"https://dfimg.dfrobot.com/wiki/17518/DFR0198_ds8b20-waterproof-temperature-sensor_datasheet_1.0.pdf","fileFormat":"application/pdf"},{"@type":"DigitalDocument","name":"Library","url":"https://dfimg.dfrobot.com/wiki/17518/DFR0198_ds8b20-waterproof-temperature-sensor_library_:DFR0198_ds8b20-waterproof-temperature-sensor_library.zip","fileFormat":"application/zip"},{"@type":"SoftwareSourceCode","name":"1. Example Code for Arduino-Temperature Reading","description":"This article provides a detailed guide on using Arduino to read temperatures with the DS18S20 sensor, featuring sample code, wiring diagrams, and preparation steps for effective project implementation."},{"@type":"DigitalDocument","name":"Reference","description":""},{"@type":"CreativeWork","name":"IoT AI-driven Yogurt Processing &amp;amp; Texture Prediction w/ Blynk","author":{"@type":"Person","name":"Kutluhan Aktar"},"url":"https://community.dfrobot.com/makelog-312996.html"},{"@type":"CreativeWork","name":"Make a TDS Detector for Water Testing Experiment","author":{"@type":"Person","name":"Frances"},"url":"https://community.dfrobot.com/makelog-312690.html"}],"mainEntity":{"@type":"ItemList","name":"Wiki Sections","itemListElement":[{"@type":"ListItem","position":1,"url":"https://wiki.dfrobot.com/DFR0198/#docs","name":"Docs"},{"@type":"ListItem","position":2,"url":"https://wiki.dfrobot.com/DFR0198/#tech_specs","name":"Tech Specs"},{"@type":"ListItem","position":3,"url":"https://wiki.dfrobot.com/DFR0198/#projects","name":"Projects"}]},"about":{"@type":"Thing","name":"Waterproof DS18B20 Digital Temperature Sensor for Arduino (IP68, -10°C to +85°C)","sku":"DFR0198","@id":"https://www.dfrobot.com/product-689.html#product","image":{"@id":"https://wiki.dfrobot.com/DFR0198/#mainimage"},"offers":{"@type":"Offer","price":6.9,"priceCurrency":"USD"},"isPartOf":{"@type":"CreativeWorkSeries","@id":"https://wiki.dfrobot.com/DFR0198/#series","name":"DS18B20 Waterproof Temperature Sensor"},"hasCertification":[]}},{"@type":"CollectionPage","@id":"https://wiki.dfrobot.com/DFR0198/#webpage","url":"https://wiki.dfrobot.com/DFR0198/","name":"","mainEntity":{"@id":"https://wiki.dfrobot.com/DFR0198#article"},"breadcrumb":{"@id":"https://wiki.dfrobot.com/DFR0198/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://wiki.dfrobot.com/DFR0198/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"wiki","item":"https://wiki.dfrobot.com/"},{"@type":"ListItem","position":2,"name":"Sensors","item":"https://wiki.dfrobot.com/category-36/"},{"@type":"ListItem","position":3,"name":"Temperature &amp; Humidity Sensor","item":"https://wiki.dfrobot.com/category-64/"},{"@type":"ListItem","position":4,"name":"DFR0198","item":"https://wiki.dfrobot.com/dfr0198/"}]},{"@type":"ImageObject","@id":"https://wiki.dfrobot.com/DFR0198/#mainimage","contentUrl":"https://dfimg.dfrobot.com/enshop/image/data/DFR0198/DFR0198_Main_01_360x240.jpg.webp","creditText":"DFRobot","creator":{"@type":"Organization","name":"DFRobot"},"publisher":{"@type":"Organization","@id":"https://wiki.dfrobot.com/#organization"}}]}</script><script  src="/dfrobotshop/lib/dfpclib.js" ssr="true"></script><noscript  data-hid="facebook-no-script"><img height="1" width="1" style="display: none;" src="https://www.facebook.com/tr?id=517401871764527&ev=PageView&noscript=1" /></noscript><link rel="preload" href="/_nuxt/9e86fd7.js" as="script"><link rel="preload" href="/_nuxt/778c53f.js" as="script"><link rel="preload" href="/_nuxt/css/f8e0a27.css" as="style"><link rel="preload" href="/_nuxt/4aefe03.js" as="script"><link rel="preload" href="/_nuxt/css/c111e78.css" as="style"><link rel="preload" href="/_nuxt/d3ed6e3.js" as="script"><link rel="preload" href="/_nuxt/css/b0cb347.css" as="style"><link rel="preload" href="/_nuxt/76bd41d.js" as="script"><link rel="stylesheet" href="/_nuxt/css/f8e0a27.css"><link rel="stylesheet" href="/_nuxt/css/c111e78.css"><link rel="stylesheet" href="/_nuxt/css/b0cb347.css">
+  </head>
+  <body >
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div><div data-viewtype="pc" class="wiki-second-page sku-page"><div data-theme="pc" data-fetch-key="data-v-d71158b6:0" class="headFrame" data-v-d71158b6><div data-fetch-key="data-v-0d8b5951:0" data-v-0d8b5951 data-v-d71158b6><!----> <!----> <!----></div> <!----> <div class="head" data-v-d71158b6><div class="df-container" data-v-d71158b6><div class="logo" data-v-d71158b6><a href="https://www.dfrobot.com/" data-v-d71158b6><img src="/dfrobotshop/images/pc/logo.png" alt="logo" data-v-d71158b6></a></div> <div class="navigate" data-v-d71158b6><a href="javascript:;" data-v-d71158b6><button data-v-d71158b6>Store<i class="icon iconfont icon-downarrow2" data-v-d71158b6></i></button></a> <a href="https://community.dfrobot.com/" data-v-d71158b6>Community</a><a href="https://www.dfrobot.com/forum/" data-v-d71158b6>Forum</a><a href="https://wiki.dfrobot.com/" data-v-d71158b6>Wiki</a><a href="https://www.dfrobot.com/blog" data-v-d71158b6>Blog</a><a href="https://learn.dfrobot.com/" data-v-d71158b6>Learn</a></div> <div class="options" data-v-d71158b6><div class="search" data-v-d71158b6><button data-v-d71158b6><i class="icon iconfont icon-search" data-v-d71158b6></i></button></div> <div data-theme="pc" class="warehouse" data-v-d71158b6><!----> <!----> <!----></div> <div class="currency" data-v-d71158b6><button data-v-d71158b6>$USD</button> <ul class="dropdownMenu" style="display:none;" data-v-d71158b6><li data-v-d71158b6><a href="javascript:;" data-v-d71158b6>$USD</a></li><li data-v-d71158b6><a href="javascript:;" data-v-d71158b6>EUR€</a></li><li data-v-d71158b6><a href="javascript:;" data-v-d71158b6>£GBP</a></li></ul></div> <div class="wishlist" data-v-d71158b6><button data-v-d71158b6><i class="icon iconfont icon-hart" data-v-d71158b6></i></button></div> <div data-theme="pc" class="miniCart" data-v-adbdabb8 data-v-d71158b6><button data-v-adbdabb8><span data-v-adbdabb8></span> <i class="icon iconfont icon-gouwuche1" data-v-adbdabb8></i></button> <!----></div> <div class="user" data-v-d71158b6><button class="headImg" data-v-d71158b6><img src="/dfrobotshop/images/pc/nologinhead.png" alt="userhead" data-v-d71158b6></button> <ul class="dropdownMenu" style="display:none;" data-v-d71158b6><li class="name" data-v-d71158b6><b data-v-d71158b6>.</b> <span data-v-d71158b6><i class="icon iconfont icon-VIPicon" data-v-d71158b6></i>VIP</span></li> <li data-v-d71158b6><a href="https://www.dfrobot.com/account/" data-v-d71158b6>My Account</a></li> <li data-v-d71158b6><a href="https://www.dfrobot.com/account/order" data-v-d71158b6>Order History</a></li> <li data-v-d71158b6><a href="https://www.dfrobot.com/account/vip" data-v-d71158b6>VIP Benefits</a></li> <li data-v-d71158b6><a href="javascript:;" data-v-d71158b6>Logout</a></li></ul></div></div></div> <!----> <!----></div> <!----></div> <div class="fullwidth-2-columns"><div data-theme="pc" class="menu"><div class="menu-sticky-block"><div class="search-input-box"><i class="iconfont search icon-search1"></i> <input type="text" placeholder="Search" value=""></div> <a href="/category-64/" class="nav-back"><i class="iconfont icon-arrow-left"></i>
+      Sensors
+    </a> <div class="menu-title">Temperature & Humidity Sensor</div> <div class="menu-list type_2"><!----> <ul><a href="/SEN0308/"><b>Gravity: Waterproof Capacitive Soil Moisture Sensor</b><span>(SKU: SEN0308)</span></a><a href="/SEN0604/"><b>RS485 4-in-1 Soil Moisture, Temperature, pH & EC Sensor</b><span>(SKU: SEN0604)</span></a><a href="/SEN0193/"><b>Gravity: Analog Capacitive Corrosion Resistant Soil Moisture Sensor for Arduino / Raspberry Pi</b><span>(SKU: SEN0193)</span></a><a href="/DFR0198/" class="active"><b>DS18B20 Waterproof Temperature Sensor</b><span>(SKU: DFR0198)</span></a><a href="/SEN0385/"><b>SHT31 Temperature & Humidity Sensor</b><span>(SKU: SEN0385)</span></a><a href="/SEN0137/"><b>Gravity: DHT22 Temperature and Humidity Sensor</b><span>(SKU: SEN0137)</span></a><a href="/SEN0206/"><b>Gravity: MLX90614  I2C Non-contact IR Temperature Sensor</b><span>(SKU: SEN0206)</span></a><a href="/SEN0236/"><b>Gravity: BME280 Environmental Sensor</b><span>(SKU: SEN0236)</span></a><a href="/DFR0067/"><b>Gravity: DHT11 Temperature & Humidity Sensor</b><span>(SKU: DFR0067)</span></a><a href="/SEN0629/"><b>Fermion: BME688 AI Environmental Sensor</b><span>(SKU: SEN0629)</span></a><a href="/SEN0227/"><b>SHT20 Temperature & Humidity Sensor</b><span>(SKU: SEN0227)</span></a><a href="/SEN0248/"><b>Gravity: BME680 Environmental Sensor</b><span>(SKU: SEN0248)</span></a><a href="/SEN0148/"><b>Digital Temperature & Humidity</b><span>(SKU: SEN0148)</span></a><a href="/SEN0428/"><b>Fermion: SHT40 Temperature & Humidity Sensor</b><span>(SKU: SEN0428)</span></a><a href="/DFR0023/"><b>Gravity: Analog LM35 Temperature Sensor</b><span>(SKU: DFR0023)</span></a><a href="/SEN0501/"><b>Gravity: High Accuracy Temperature, Humidity, Pressure, Ambient Light and UV Sensor</b><span>(SKU: SEN0501)</span></a><a href="/SEN0497/"><b>Gravity: DHT20 Temperature & Humidity Sensor</b><span>(SKU: SEN0497)</span></a><a href="/SEN0528/"><b>Gravity: AHT20 Temperature and Humidity Sensor</b><span>(SKU: SEN0528)</span></a><a href="/SEN0198/"><b>Gravity: Analog High Temperature Sensor (30~350°C)</b><span>(SKU: SEN0198)</span></a><a href="/SEN0500/"><b>Fermion: Temperature & Humidity(SHTC3), Pressure(BMP280), Ambient Light(VEML7700) and UV(ML8511) Sensor</b><span>(SKU: SEN0500)</span></a><a href="/SEN0333/"><b>Fermion: SHT35 Temperature and Humidity Sensor</b><span>(SKU: SEN0333)</span></a><a href="/DFR0024/"><b>Gravity: DS18B20 Temperature Sensor</b><span>(SKU: DFR0024)</span></a><a href="/SEN0375/"><b>BME680 4-in-1 Environmental Sensor</b><span>(SKU: SEN0375)</span></a><a href="/SEN0256/"><b>TS01 Non-Contact Analog Infrared Temperature Sensor (-70℃~270℃)</b><span>(SKU: SEN0256)</span></a><a href="/DFR0588/"><b>Gravity: SHT30 Temperature & Humidity Sensor</b><span>(SKU: DFR0588)</span></a><a href="/SEN0414/"><b>Fermion: SHTC3 Temperature & Humidity Sensor</b><span>(SKU: SEN0414)</span></a><a href="/SEN0435/"><b>Fermion: MCP9808 High Accuracy Digital Temperature Sensor</b><span>(SKU: SEN0435)</span></a><a href="/SEN0527/"><b>Fermion: AHT20 Temperature and Humidity Sensor</b><span>(SKU: SEN0527)</span></a><a href="/SEN0434/"><b>Fermion: STS35 High Accuracy Digital Temperature Sensor</b><span>(SKU: SEN0434)</span></a><a href="/DFR0558/"><b>Gravity: MAX31855K K-type High Temperature Sensor</b><span>(SKU: DFR0558)</span></a><a href="/SEN0656/"><b>Gravity: CT1780 1-Wire K-Type Thermocouple Amplifier (-270℃ to +1372℃ Temp Range)</b><span>(SKU: SEN0656)</span></a><a href="/SEN0546/"><b>I2C Digital Temperature & Humidity Sensor</b><span>(SKU: SEN0546)</span></a><a href="/SEN0600/"><b>RS485 MODBUS-RTU IP68 Soil Temperature & Moisture Sensor</b><span>(SKU: SEN0600)</span></a><a href="/SEN0601/"><b>RS485 Soil Temperature, Humidity and EC Sensor</b><span>(SKU: SEN0601)</span></a><a href="/SEN0114/"><b>Gravity: Analog Soil Moisture Sensor</b><span>(SKU: SEN0114)</span></a><a href="/SEN0263/"><b>MLX90614 IR Thermometer Sensor</b><span>(SKU: SEN0263)</span></a><a href="/SEN0617/"><b>Gravity: BME688 Environmental Sensor</b><span>(SKU: SEN0617)</span></a><a href="/SEN0334/"><b>Gravity: SHT31-F Temperature and Humidity Sensor</b><span>(SKU: SEN0334)</span></a><a href="/SEN0602/"><b>RS485 Soil pH, Moisture, Temperature Monitoring Sensor</b><span>(SKU: SEN0602)</span></a><a href="/SEN0331/"><b>Fermion: SHT31 Digital Temperature & Humidity Sensor</b><span>(SKU: SEN0331)</span></a><a href="/SEN0332/"><b>Fermion: SHT31-F Temperature and Humidity Sensor</b><span>(SKU: SEN0332)</span></a><a href="/SEN0264/"><b>TS01 Non-Contact Analog Infrared Temperature Sensor</b><span>(SKU: SEN0264)</span></a><a href="/SEN0330/"><b>Fermion: SHT30 Digital Temperature & Humidity Sensor</b><span>(SKU: SEN0330)</span></a><a href="/SEN0254/"><b>TC01 Non-contact 16x4 Pixel Infrared Temperature Sensor</b><span>(SKU: SEN0254)</span></a><a href="/BOS0006/"><b>BOSON Steam Sensor i6</b><span>(SKU: BOS0006)</span></a><a href="/BOS0041/"><b>BOSON Humidity Sensor i18</b><span>(SKU: BOS0041)</span></a><a href="/BOS0038/"><b>BOSON Soil Moisture Sensor i16</b><span>(SKU: BOS0038)</span></a><a href="/BOS0011/"><b>BOSON Temperature Sensor i11</b><span>(SKU: BOS0011)</span></a><a href="/BOS0042/"><b>BOSON Waterproof Temperature Sensor i19</b><span>(SKU: BOS0042)</span></a></ul> <!----></div></div></div> <div class="full"><div class="full-container"><ul data-theme="pc" class="breadcrumb"><li><i class="iconfont icon-home2"></i> <a href="/">wiki</a></li><li><!----> <a href="/category-36/">Sensors</a></li><li><!----> <a href="/category-64/">Temperature & Humidity Sensor</a></li><li><!----> <span>DFR0198</span></li></ul> <div class="wiki-introduction"><div class="text"><h1>DS18B20 Waterproof Temperature Sensor</h1> <p>SKU: DFR0198</p> <div class="desc"><p>
+                  The DS18B20 Waterproof Temperature Sensor is engineered for long-distance and wet conditions, providing reliable temperature readings up to 125℃. This digital sensor uses a 1-Wire interface, compatible with 3.0-5.5V systems, and features a unique serial number for each unit, enabling multiple sensors on the same bus. With its durable PVC cable recommended for use under 100℃, it ensures accurate readings without signal degradation over distance. Ideal for Arduino projects and various applications, this sensor is versatile and dependable in challenging environments.
+                </p></div></div> <div class="view"><img src="https://dfimg.dfrobot.com/enshop/image/data/DFR0198/DFR0198_Main_01_360x240.jpg.webp" alt="Angled shot of waterproof DS18B20 temperature sensor with coiled cable and colored wires.-DFRobot product sku:DFR0198 image."> <button><i class="iconfont icon-cart1"></i>Buy now</button></div></div> <div class="download-resources"><p>Downloadable Resources</p> <ul><a href="https://dfimg.dfrobot.com/wiki/17518/DFR0198_ds8b20-waterproof-temperature-sensor_datasheet_1.0.pdf" target="_blank" download="DFR0198_Datasheet"><i class="iconfont icon-Datasheet_nor"></i> Datasheet </a> <!----><a href="https://dfimg.dfrobot.com/wiki/17518/DFR0198_ds8b20-waterproof-temperature-sensor_library_:DFR0198_ds8b20-waterproof-temperature-sensor_library.zip" target="_blank" download="DFR0198_Library"><i class="iconfont icon-Library_nor"></i> Library </a> <!----></ul></div> <div class="category-select-tab"><li class="selected">Docs</li><li>Tech Specs</li><li>Projects</li></div> <div class="wiki-content docs"><div style="display:;"><a href="/dfr0198/docs/18272" target="_blank" class="doc"><p class="wiki-title">1. Example Code for Arduino-Temperature Reading</p> <p class="wiki-desc">This article provides a detailed guide on using Arduino to read temperatures with the DS18S20 sensor, featuring sample code, wiring diagrams, and preparation steps for effective project implementation.</p></a> <a href="/dfr0198/docs/18271" target="_blank" class="reference"><p class="wiki-title">Reference</p> <!----></a> </div> <div style="display:none;"><div><h3>Specification</h3>
+<div class="table-box"><table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Power/Data Voltage</td>
+<td>3.0V to 5.5V</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>±0.5℃ from -10℃ to +85℃</td>
+</tr>
+<tr>
+<td>Usable Temperature Range</td>
+<td>-55℃ to 125℃ (-67℉ to +257℉)</td>
+</tr>
+<tr>
+<td>Resolution</td>
+<td>9 to 12 bit selectable</td>
+</tr>
+<tr>
+<td>Interface</td>
+<td>1-Wire interface - requires only one digital pin for communication</td>
+</tr>
+<tr>
+<td>Unique ID</td>
+<td>64 bit ID burned into chip</td>
+</tr>
+<tr>
+<td>Multiple Sensors</td>
+<td>Can share one pin</td>
+</tr>
+<tr>
+<td>Alarm System</td>
+<td>Temperature-limit alarm system</td>
+</tr>
+<tr>
+<td>Query Time</td>
+<td>Less than 750ms</td>
+</tr>
+<tr>
+<td>Interface Wires</td>
+<td><br>- Red wire - VCC<br>- Black wire - GND<br>- Yellow wire - DATA<br></td>
+</tr>
+<tr>
+<td>Probe Dimensions</td>
+<td>Stainless steel tube 6mm diameter by 35mm long</td>
+</tr>
+<tr>
+<td>Cable Diameter</td>
+<td>4mm</td>
+</tr>
+<tr>
+<td>Cable Length</td>
+<td>90cm</td>
+</tr>
+</tbody>
+</table></div>
+<p><img src="https://dfimg.dfrobot.com/645b699faa9508d63a42d7db/wikien/d883a45a77aacfb4163defba7b8dadb8_0x0.png.webp" alt="18b20 Dimensional Drawing .png" title="18b20.png"></p>
+<h3>Pinout</h3>
+<ul>
+<li>Red wire - VCC</li>
+<li>Black wire - GND</li>
+<li>Yellow wire - DATA</li>
+</ul>
+</div></div> <div style="display:none;"></div> <div style="display:none;"> <span class="loadmore" style="display:none;">More <i class="iconfont icon-downarrow2"></i></span></div> <div style="display:none;"><a data-theme="pc" href="https://community.dfrobot.com/makelog-312996.html" target="_blank" class="project-card"><img src="https://dfimg.dfrobot.com/5e983a7ac913a99430e3cc8c/makelog/a072b42aa1c0e11ebce22ef7e8f67c2a_325x230.jpg.webp" alt="thumb"> <div class="project-info"><b>IoT AI-driven Yogurt Processing &amp;amp; Texture Prediction w/ Blynk</b> <p></p> <div class="author"><div class="img-box"><img src="https://dfimg.dfrobot.com/5e983a7ac913a99430e3cc8c/community/3cfc39ab07ce08cce56292d48c91aad2_34x34.jpg.webp" alt="author"></div> <span>Kutluhan Aktar</span> <span>Jun 09, 2025</span></div></div></a><a data-theme="pc" href="https://community.dfrobot.com/makelog-312690.html" target="_blank" class="project-card"><img src="https://dfimg.dfrobot.com/5d3c06d50ad96a3f659ed74c/makelog/dc09835833974f8c1eb0142121da532f_325x230.jpg.webp" alt="thumb"> <div class="project-info"><b>Make a TDS Detector for Water Testing Experiment</b> <p></p> <div class="author"><div class="img-box"><img src="https://dfimg.dfrobot.com/5d3c06d50ad96a3f659ed74c/makelog/21415e2a5b0853f03ed86fe41742bf67_34x34.jpeg.webp" alt="author"></div> <span>Frances</span> <span>Sep 15, 2022</span></div></div></a> <span class="loadmore" style="display:none;">More <i class="iconfont icon-downarrow2"></i></span></div> <div style="display:none;"></div></div> <!----> <div data-theme="pc" class="helpful-survey"><div class="begining-survey"><p>Was this article helpful?</p> <div class="buttons"><button><i class="iconfont icon-thumbs-up"></i></button> <button><i class="iconfont icon-thumbs-down"></i></button></div></div> <div class="further-survey"></div> <!----></div></div></div></div> <div data-theme="pc" class="scroll-top" style="opacity:0;"><i class="iconfont icon-uparrow"></i>
+  TOP
+</div> <footer data-theme="pc"><div class="df-container con xs"><div class="nav"><div class="left"><span><b>Information</b> <a href="https://www.dfrobot.com/about-us">About Us</a><a href="https://www.dfrobot.com/warranty">Warranty</a><a href="https://www.dfrobot.com/privacy-policy">Terms &amp; Conditions</a><a href="https://www.dfrobot.com/shipping">Shipping</a><a href="https://www.dfrobot.com/payment">Payment</a><a href="https://www.dfrobot.com/faq">FAQ</a></span><span><b>Customer Service</b> <a href="https://www.dfrobot.com/distributor">DFRobot Distributors</a><a href="https://www.dfrobot.com/contact-us">Contact Us</a><a href="https://www.dfrobot.com/site-map">Site Map</a></span><span><b>My Account</b> <a href="https://www.dfrobot.com/affiliates">Affiliates</a><a href="https://www.dfrobot.com/special.html">Specials</a></span></div> <div class="right"><a href="https://www.dfrobot.com/"><img src="/dfrobotshop/images/pc/logo.png" alt="logo"></a> <div class="subscribe"><b>Sign up for exclusive offers!</b> <form id="mc-embedded-subscribe-form" action="//DFRobot.us16.list-manage.com/subscribe/post?u=e384b3074873a648e7d3237cc&id=316955a8ff" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="novalidate" class="validate"><div id="mc_embed_signup_scroll" class="footer_scroll"><input id="subscribeEmail" type="email" value name="EMAIL" placeholder="Your email address" required="required" class="email"> <div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_e384b3074873a648e7d3237cc_316955a8ff" tabindex="-1" value></div> <button id="subscribeBtn" aria-label="subscribe" type="submit" name="subscribe"><i class="icon iconfont icon-fangxiangyi"></i></button></div></form></div> <div class="like"><b>Like us on</b> <span><a href="https://www.facebook.com/DFrobot" title="dfrobot facebook" target="_blank"><i class="icon iconfont icon-facebook1"></i></a> <a href="https://twitter.com/dfrobotcn" title="dfrobot twitter" target="_blank"><i class="icon iconfont icon-twitter"></i></a> <a href="https://discord.com/invite/wr4szfVUZ7" title="dfrobot discord" target="_blank"><i class="icon iconfont icon-discord"></i></a> <a href="https://www.linkedin.com/company/dfrobot" title="dfrobot linkedin" target="_blank"><i class="icon iconfont icon-linkedin"></i></a> <a href="https://www.youtube.com/user/DFROBOTCN" title="dfrobot youtube" target="_blank"><i class="icon iconfont icon-YouTube"></i></a> <a href="https://www.tiktok.com/@dfrobot_official" title="dfrobot tiktok" target="_blank"><i class="icon iconfont icon-douyin-icon"></i></a></span></div></div></div> <div class="copyright">Copyright © 2025 DFRobot. All rights reserved.</div></div></footer> <!----></div></div></div></div><script>window.__NUXT__=(function(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,_,$,aa,ab,ac,ad,ae,af,ag,ah,ai,aj,ak,al,am,an,ao,ap,aq,ar,as,at,au,av,aw,ax,ay,az,aA,aB,aC,aD,aE,aF,aG,aH,aI,aJ,aK,aL,aM,aN,aO,aP,aQ,aR,aS,aT,aU,aV,aW,aX,aY,aZ,a_,a$,ba,bb,bc,bd,be,bf,bg,bh,bi,bj,bk,bl,bm,bn,bo,bp,bq,br,bs,bt,bu,bv,bw,bx,by,bz,bA,bB,bC,bD,bE,bF,bG,bH,bI,bJ,bK,bL,bM,bN,bO,bP,bQ,bR,bS,bT,bU,bV,bW,bX,bY,bZ,b_,b$,ca,cb,cc,cd,ce,cf,cg,ch,ci,cj,ck,cl,cm,cn,co,cp,cq,cr,cs,ct,cu,cv,cw,cx,cy,cz,cA,cB){bA.id="16492";bA.thumb="https:\u002F\u002Fdfimg.dfrobot.com\u002F5e983a7ac913a99430e3cc8c\u002Fmakelog\u002Fa072b42aa1c0e11ebce22ef7e8f67c2a.jpg";bA.source=bB;bA.title=bC;bA.desc=T;bA.authorName=bD;bA.authorImg="https:\u002F\u002Fdfimg.dfrobot.com\u002F5e983a7ac913a99430e3cc8c\u002Fcommunity\u002F3cfc39ab07ce08cce56292d48c91aad2.jpg";bA.authorUrl="https:\u002F\u002Fcommunity.dfrobot.com\u002Fuser-4963.html";bA.showTime="Jun 09, 2025";bA.url=bE;bF.id="16478";bF.thumb="https:\u002F\u002Fdfimg.dfrobot.com\u002F5d3c06d50ad96a3f659ed74c\u002Fmakelog\u002Fdc09835833974f8c1eb0142121da532f.jpg";bF.source=bB;bF.title=bG;bF.desc=T;bF.authorName=bH;bF.authorImg="https:\u002F\u002Fdfimg.dfrobot.com\u002F5d3c06d50ad96a3f659ed74c\u002Fmakelog\u002F21415e2a5b0853f03ed86fe41742bf67.jpeg";bF.authorUrl="https:\u002F\u002Fcommunity.dfrobot.com\u002Fuser-4853.html";bF.showTime="Sep 15, 2022";bF.url=bI;cl[0]={description:a,link:"\u002Fnew-products.html",submenu:[],title:"New Products"};cl[1]={description:a,link:a,submenu:[{description:"6 TOPS LLM MCP AI Vision Sensor (20+ Models, Deploy Custom Models)",link:"\u002Fproduct-2995.html",title:"Huskylens 2"},{description:"AI learning device designed for education",link:"\u002Ftopic-314.html",title:"UNIHIKER"},{description:"A Palm-Sized X86 Single Board Computer Powered by the Intel N150",link:"\u002Fproduct-2989.html",title:"LattePanda IOTA"},{description:"A micro x86 compute module featuring Intel N100 quad-core processor",link:"\u002Fkit-004.html",title:"LattePanda Mu"},{description:cm,link:cn,title:"ESP32"},{description:co,link:cp,title:cq},{description:cr,link:cs,title:ct},{description:"Compatible with 1V\u002F2V\u002F3V\u002F5V\u002F9V\u002F12V\u002F18V solar panels ",link:"\u002Fproduct-1712.html",title:"Solar Power Manager"},{description:"mmwave sensor, ultrasonic sensor, lightning distance sensor, infrared proximity sensor",link:cu,title:cv}],title:"Featured"};cl[2]={description:a,link:a,submenu:[{description:a,link:"\u002Ftopic-284.html",title:s},{description:"NVIDIA Jetson Orin, ESP32-CAM, other boards based on ARM and RISC-V AI processor",link:"\u002Ftopic-284-184.html",title:"AI Development Boards"},{description:"Language learning voice recognition sensor, AI vision sensor, AI vision camera",link:"\u002Ftopic-284-36.html",title:"AI Sensors"},{description:"NVIDIA Jetson Orin \u002F Nano \u002F Xavier carrier boards, OpenMV Cam shields",link:"\u002Ftopic-284-156.html",title:"AI Modules"},{description:"Jetson Nano accessories and other smart tools",link:"\u002Ftopic-284-66.html",title:"AI Prototyping & Accessories"},{description:a,link:"\u002Ftopic-284-140.html",title:"AI Kits"}],title:"AI Hardware"};cl[3]={description:a,link:a,submenu:[{description:a,link:"\u002Ftopic-277.html",title:s},{description:"Arduino UNO R4 \u002F R3, Arduino Mega 2560, Arduino Leonardo, Arduino Nano and other boards compatible with Arduino",link:"\u002Ftopic-277-184.html",title:"Arduino Development Boards"},{description:"mmwave sensor, voice recognition sensor, ultrasonic sensor, gas sensor and other sensors compatible with Arduino",link:"\u002Ftopic-277-36.html",title:"Arduino Sensors"},{description:"MP3 player, IO Expansion Shield, DAC module, LCD display module, NB-IoT \u002F LTE \u002F GNSS \u002F GPRS \u002F GPS Expansion Shield",link:"\u002Ftopic-277-156.html",title:"Arduino Modules"},{description:"Arduino beginner kit with detailed tutorials, arduino sensor kit, arduino robot kit, arduino coding kit",link:"\u002Ftopic-277-140.html",title:"Arduino Kits"},{description:"Prototyping shields, cables, connectors, USB power supply, battery holder",link:"\u002Ftopic-277-66.html",title:"Arduino Prototyping & Accessories"}],title:"Arduino"};cl[4]={description:a,link:a,submenu:[{description:a,link:"\u002Fcategory-184.html",title:s},{description:"Raspberry Pi, LattePanda, NVIDIA, ARM",link:"\u002Fcategory-311.html",title:"Single Board Computer"},{description:cw,link:"\u002Fcategory-188.html",title:cx},{description:"x86 Windows \u002F Linux single board computer, server, compute module",link:"\u002Fcategory-186.html",title:"LattePanda Dev Board"},{description:"NVIDIA Jetson Orin Nano, NVIDIA Jetson AGX Orin",link:"\u002Fcategory-268.html",title:"NVIDIA"},{description:"UNIHIKER, Raspberry Pi CM 5, ROCK Pi",link:"\u002Fcategory-294.html",title:"ARM"},{description:"Arduino, ESP32 & ESP8266, micro:bit",link:"\u002Fcategory-312.html",title:"MCU"},{description:"Development boards compatible with Arduino: DFRduino , Beetle, Romeo, Bluno, Xboard",link:"\u002Fcategory-185.html",title:"Arduino Board"},{description:cy,link:"\u002Fcategory-271.html",title:"ESP32 & ESP8266"},{description:"A pocket-sized computer designed to inspire creative thinking in children",link:"\u002Fcategory-257.html",title:cz},{description:"PYNQ-Z2, Calliope, Particle, Maixduino, CurieCore",link:"\u002Fcategory-52.html",title:am}],title:U};cl[5]={description:a,link:a,submenu:[{description:cm,link:cn,title:s},{description:"Low power consumption microcontroller intentionally designed for IoT projects",link:"\u002Ftopic-302.html",title:"FireBeetle"},{description:"IoT hardwares and IoT home automation devices",link:"\u002Ftopic-276.html",title:"Internet of Things - IoT"},{description:cy,link:"\u002Ftopic-302-184.html",title:U},{description:"Sensors compatible with ESP32",link:"\u002Ftopic-302-36.html",title:t},{description:"IO Shield, OLED Display, LoRa Radio, LED Matrix, Terminal Block Board for FireBeetle ESP32",link:"\u002Ftopic-302-156.html",title:z},{description:"Hackster & DFRobot AI \u002F IoT \u002F Environmental Sensor Starter EEDU Kit",link:"\u002Ftopic-302-140.html",title:an},{description:"Prototyping board, Enclosure for FireBeetle, Patch Test Hook",link:"\u002Ftopic-302-66.html",title:J}],title:"ESP32 \u002F ESP8266"};cl[6]={description:a,link:a,submenu:[{description:a,link:"\u002Ftopic-278.html",title:s},{description:"LattePanda Mu, LattePanda Sigma, LattePanda 3 Delta, LattePanda 2 Alpha \u002F Delta, LattePanda V1",link:"\u002Ftopic-278-184.html",title:"LattePanda Boards"},{description:"Carrier Board for LattePanda Mu, touch display, UPS hat, network card for LattePanda",link:"\u002Ftopic-278-156.html",title:z},{description:"Cases, streaming cable, cooler, heat sink, power cable, power supply for LattePanda",link:"\u002Ftopic-278-66.html",title:"LattePanda Accessories"},{description:"Camera, GPS receiver for LattePanda",link:"\u002Ftopic-278-36.html",title:t},{description:"LattePanda Mu evaluation kit, LattePanda board with case & streaming cable & touch display kit",link:"\u002Ftopic-278-140.html",title:"LattePanda Kits"}],title:"LattePanda"};cl[7]={description:a,link:a,submenu:[{description:a,link:"\u002Fcategory-156.html",title:s},{description:"DC \u002F Stepper \u002F Brushless \u002F Geared \u002F TT motor and motor driver, servo, relay module, peristaltic pump",link:"\u002Fcategory-51.html",title:"Motors & Actuators & Drivers"},{description:"3G\u002F4G\u002F5G, Lora, WiFi, Bluetooth, NB-IoT, Ethernet, GSM\u002FGPRS\u002FGPS, Serial, CANBUS & OBD, RFID, Infra Red, Radio (RF), Xbee \u002F Zigbee",link:"\u002Fcategory-45.html",title:"Communications"},{description:"DFPlayer, mini MP3 player, speaker module, audio analyzer module, digital buzzer, audio amplifier",link:"\u002Fcategory-259.html",title:"Audio"},{description:"IO Expansion Shield, UPS HAT, Carrier Board for Arduino \u002F Raspberry Pi \u002F micro:bit \u002F LattePanda",link:"\u002Fcategory-269.html",title:"IO Expansion Shields & HATs"},{description:"eDP touch display, IPS display, DSI touchscreen, capacitive touch panel, LED matrix, OLED display, LEDs",link:"\u002Fcategory-53.html",title:"LCDs\u002FLEDs\u002FE-ink\u002FDisplays"},{description:"ADC Module, DAC Module",link:"\u002Fcategory-261.html",title:"AD\u002FDA Converter"},{description:"Real-time clock module",link:"\u002Fcategory-232.html",title:"RTC Modules"},{description:"MicroSD card module, 16GB 32GB 64GB 128GB MicroSD memory card",link:"\u002Fcategory-213.html",title:"Storage Modules"},{description:"Solar power manager, battery holder, DC-DC buck converter, wireless charging module",link:"\u002Fcategory-70.html",title:"Power Modules"},{description:"GamePad, joystick, sensor adapter",link:"\u002Fcategory-215.html",title:am}],title:z};cl[8]={description:a,link:a,submenu:[{description:a,link:"\u002Fcategory-66.html",title:s},{description:"Heatsink, cooling fan, DIN rail mount bracket, VESA mounting kit",link:"\u002Fcategory-96.html",title:"Accessories"},{description:"Buttons, headers, LEDs, resistors, capacitors, diodes & transistors, crystals",link:"\u002Fcategory-219.html",title:"Electronics"},{description:"Case for Raspberry Pi, LattePanda, micro:bit, Arduino UNO, Jetson Nano",link:"\u002Fcategory-303.html",title:"Enclosure&Case"},{description:"Power supply, solar panel, AA batteries holder",link:"\u002Fcategory-92.html",title:"Power"},{description:"Jumper wires, power cables, USB data cables, gravity module cables, audio & video cables, Ethernet cable",link:"\u002Fcategory-86.html",title:"Cables and Wires"},{description:"micro:Maqueen mechanic, robot gripper, rubber wheels, mecanum wheels, screw",link:"\u002Fcategory-46.html",title:"Mechanics"},{description:"Electric solenoid lock, hot plate preheater, straight\u002Fcross screwdriver",link:"\u002Fcategory-43.html",title:"Tools"},{description:"Bread board self adhesive, prototyping shield for arduino, flexible single sided protoBoard",link:"\u002Fcategory-67.html",title:"Breadboards & Protoboards"},{description:"Soldering station, soldering starter tools, soldering iron welding tool kit",link:"\u002Fcategory-115.html",title:"Soldering"},{description:"Wireless keyboard for Raspberry Pi and LattePanda",link:"\u002Fcategory-270.html",title:"Keyboards"},{description:"Electroluminecent wire",link:"\u002Fcategory-132.html",title:"EL Wires"}],title:J};cl[9]={description:a,link:a,submenu:[{description:a,link:"\u002Ftopic-272.html",title:s},{description:cw,link:"\u002Ftopic-272-184.html",title:"Raspberry Pi Boards"},{description:"Heatsink, cooling case, power supply and cables for Raspberry Pi",link:"\u002Ftopic-272-66.html",title:J},{description:"Touch display, relay module, UPS HAT, expansion board for Raspberry Pi",link:"\u002Ftopic-272-156.html",title:z},{description:"Raspberry Pi 5 and 4B Starter Kit",link:"\u002Ftopic-272-140.html",title:"Raspberry Pi Kits"},{description:"Sensors compatible with Raspberry Pi, such as camera, ultrasonic sensor, etc.",link:"\u002Ftopic-272-36.html",title:t}],title:cx};cl[10]={description:a,link:a,submenu:[{description:a,link:"\u002Ftopic-279.html",title:s},{description:"Robot control board with motor driver",link:"\u002Ftopic-279-184.html",title:U},{description:"LiDAR, ToF laser range scanner, ultrasonic distance sensor, camera, DOF sensor",link:"\u002Ftopic-279-36.html",title:t},{description:"Motor, motor driver, digital servo, clutch servo, DC-DC converter",link:"\u002Ftopic-279-156.html",title:z},{description:"micro:bit programming robot platform, mobile robot platform, robotic arm",link:"\u002Ftopic-279-140.html",title:an},{description:"micro:Maqueen Mechanic, rubber wheel, mecanum wheel, battery holder",link:"\u002Ftopic-279-66.html",title:J}],title:"Robotics"};cl[11]={description:a,link:a,submenu:[{description:a,link:"\u002Fcategory-36.html",title:"All Sensors"},{description:"Sensors with standard interface, plug-and-play, no soldering required, with color coded pin headers & cables",link:"\u002Ftopic-282.html",title:"Gravity Sensors"},{description:"High-quality and open-source breakout boards with small size and flexible wiring method",link:"\u002Ftopic-292.html",title:"Fermion Breakout"},{description:co,link:cp,title:cq},{description:cr,link:cs,title:ct},{description:"Solid state liDAR, laser range scanner, ToF LiDAR, single-point ranging LiDAR",link:"\u002Fcategory-313.html",title:"LiDAR"},{description:"Ultrasonic sensor, lightning distance sensor, infrared proximity sensor",link:cu,title:cv},{description:"Soil moisture sensor, DHT\u002FSHT\u002FAHT temperature & humidity sensor, BME688 environmental sensor",link:"\u002Fcategory-64.html",title:M},{description:"AI vision sensor, gesture sensor, fingerprint sensor, touch sensor",link:"\u002Fcategory-76.html",title:"Interactive Sensors"},{description:"Voice recognition sensor, text to speech, voice synthesizer module, voice recorder module",link:"\u002Fcategory-63.html",title:"Sound Sensors"},{description:"mmWave, human presence detection sensor, PIR sensor, vibration sensor, tilt sensor",link:"\u002Fcategory-204.html",title:"Motion Sensors"},{description:"IR positioning camera, ambient light sensor, 3D ToF sensor, camera module, RGB color sensor, QR code scanner",link:"\u002Fcategory-58.html",title:"Light & Imaging Sensors"},{description:"AC current sensor, digital wattmeter, LED current meter",link:"\u002Fcategory-201.html",title:"Current Sensors"},{description:"DOF sensor, triple axis accelerometer, 6-axis accelerometer, 9-axis sensor",link:"\u002Fcategory-65.html",title:"IMU Sensors"},{description:"Push button, LED button, magnetic switch, LED switch",link:"\u002Fcategory-205.html",title:"Switches & Buttons"},{description:"Heart rate monitor sensor, EMG\u002FECG\u002FPPG sensor",link:"\u002Fcategory-199.html",title:"e-Health Sensors"},{description:"Digital weight sensor",link:"\u002Fcategory-200.html",title:"Weight Sensors"},{description:"Triple axis magnetometer sensor, hall sensor",link:"\u002Fcategory-60.html",title:"Magnetic Sensors"},{description:"Barometric pressure sensor, differential pressure sensor, air pressure sensor",link:"\u002Fcategory-229.html",title:"Pressure Sensors"},{description:"Thin film pressure sensor, flexiforce pressure sensor",link:"\u002Fcategory-202.html",title:"Flex Sensors"},{description:"Rotary encoder, TT Motor encoder, 360 degree hall angle sensor",link:"\u002Fcategory-301.html",title:"Encoders"},{description:"USB GPS receiver compatible with Raspberry Pi \u002F LattePanda \u002F Jetson Nano",link:"\u002Fcategory-57.html",title:"GPS"},{description:"Analog slide position sensor, analog rotation potentiometer sensor",link:"\u002Fcategory-203.html",title:"Potentiometer"},{description:"9 PCS \u002F 27 PCS \u002F 37 PCS sensor set for Arduino and Raspberry Pi",link:"\u002Fcategory-227.html",title:"Sensor Set"},{description:"Geiger counter module, analog signal isolator, soil NPK measure sensor",link:"\u002Fcategory-230.html",title:am}],title:"Sensor"};cl[12]={description:a,link:a,submenu:[{description:"Arduino and micro:bit kits with detailed tutorials",link:"\u002Ftopic-280.html",title:cA},{description:"Educational robot platform for micro:bit and micro:bit accessories",link:"\u002Ftopic-281.html",title:cz},{description:"micro:bit robots for hands-on STEM",link:"\u002Ftopic-319.html",title:"Maqueen"},{description:"Modularized electronic building blocks designed for young inventors and STEM educators",link:"\u002Ftopic-283.html",title:"Boson"},{description:"micro:bit, UNIHIKER",link:"\u002Ftopic-280-184.html",title:U},{description:"Huskylens, Lark weather station, sensor set for Arduino",link:"\u002Ftopic-280-36.html",title:t},{description:"micro:bit accessories, science data acquisition module",link:"\u002Ftopic-280-156.html",title:z},{description:"Arduino beginner kit, micro:bit educational programming robot kit",link:"\u002Ftopic-280-140.html",title:an},{description:"micro:Maqueen mechanic, UNIHIKER silicone case",link:"\u002Ftopic-280-66.html",title:J}],title:cA};cB.USD={symbol:"$",code:al,name:"$USD",rate:c};cB.EUR={symbol:"€",code:"EUR",name:"EUR€",rate:.85254949};cB.GBP={symbol:"£",code:"GBP",name:"£GBP",rate:.74400586};return {layout:f,data:[{viewType:L,sku:p,breadcrumbs:[{href:ap,text:f},{href:"\u002Fcategory-36\u002F",text:t},{href:aq,text:M},{href:"\u002Fdfr0198\u002F",text:p}],menu:{type:ar,now:{text:M,href:a},back:{text:t,href:aq},content:[{id:"18638",material_id:h,title:as,subject:"sen0308\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764671354,sku:"SEN0308",user_id:k,product:a,default_sort:89,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2054,product_name:"Gravity: IP65 Capacitive Soil Moisture Sensor for Arduino \u002F ESP32 \u002F Raspberry Pi",category_names:m,product_type:g,category_category_ids:n,tag:"SEN0308, Analog Waterproof Capacitive Soil Moisture Sensor, waterproof, soil moisture sensor, Soil Moisture Sensor, Analog Capacitive Soil Moisture Sensor, Arduino Sensor, Waterproof Probe, Corrosion Resistant, Indoor Plant Care, Short-Term Monitoring, Educational Projects, Environmental Science Courses",pm_tag:"Analog.ToS,5V.WV,Gravity.Brand,Environments.Scenario,Temperature & Humidity Sensor.PF,Pin.Interface,Arduino IDE.IDE,M+.SL,3.3V.WV,C++.PL",text:as,href:"\u002FSEN0308\u002F",active:d},{id:"20207",material_id:h,title:at,subject:"sen0604\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764845085,sku:"SEN0604",user_id:k,product:a,default_sort:144,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2830,product_name:"RS485 4-in-1 Soil Moisture, Temperature, pH &amp; EC Sensor for Smart Agriculture (IP68, 5-30V)",category_names:q,product_type:g,category_category_ids:r,tag:"SEN0604, integrated sensor, soil temperature sensor, soil moisture sensor, soil pH sensor,  soil moisture monitoring, Soil Data monitor, Environmental Monitoring sensor, Agriculture Sensors, RS485 soil tester, Soil Meter, Soil Survey Instrument , 4-in-1 Soil Tester for plants and lawns, Portable 4 In 1 Soil Sensors, soil PH Meter, Soil Testing Machine, soil detector, 4-IN-1 soil condition meter, 4 in1 pH measuring device for soil, Moisture Meter For Plants",pm_tag:"DF Others.Brand,5V.WV,Test and Measurement.Scenario,Lab.Scenario,12V.WV,Temperature & Humidity Sensor.PF,Pin.Interface,24V.WV,C++.PL,19V.WV,Arduino IDE.IDE,Class.Scenario,Project.Scenario,RS485.ToS",text:at,href:"\u002FSEN0604\u002F",active:d},{id:"17627",material_id:h,title:W,subject:"sen0193\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764586518,sku:"SEN0193",user_id:k,product:a,default_sort:148,sort_order_plus:b,_score:e,stock_name_status:j,product_id:1385,product_name:W,category_names:m,product_type:g,category_category_ids:n,tag:"SEN0193,Gravity, soil sensor, soil moisture sensor, arduino soil sensor, arduino soil moisture sensor, analog capacitive soil moisture sensor, corrosion resistant sensor, farming, gardening, plant moisture",pm_tag:"Arduino IDE.IDE,3.3V.WV,Gravity.Brand,C++.PL,Analog.ToS,Temperature & Humidity Sensor.PF,Mind+.IDE,Environments.Scenario,5V.WV,M.SL",text:W,href:"\u002FSEN0193\u002F",active:d},{id:"17518",material_id:h,title:N,subject:"dfr0198\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764586458,sku:p,user_id:k,product:a,default_sort:au,sort_order_plus:b,_score:e,stock_name_status:j,product_id:O,product_name:P,category_names:q,product_type:g,category_category_ids:r,tag:av,pm_tag:aw,text:N,href:"\u002FDFR0198\u002F",active:o},{id:"20555",material_id:h,title:ax,subject:"sen0385\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1765026678,sku:"SEN0385",user_id:u,product:a,default_sort:326,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2160,product_name:"SHT31 Outdoor Temperature &amp; Humidity Sensor (-40℃~125℃) - I2C",category_names:q,product_type:g,category_category_ids:r,tag:"SEN0385, SHT31, SHT3x, waterproof, dustproof, weatherproof, temperature and humidity sensor, outdoor temperature and humidity sensor, high accuracy, low power consumption, weather station, Sensirion, CMOSens, environmental sensor, environmental monitoring",pm_tag:"Pin.Interface,Environments.Scenario,C++.PL,Automation.Scenario,I2C.ToS,DF Others.Brand,Production.Scenario,5V.WV,3.3V.WV,M+.SL,Arduino IDE.IDE,Temperature & Humidity Sensor.PF",text:ax,href:"\u002FSEN0385\u002F",active:d},{id:"17500",material_id:h,title:ay,subject:"sen0137\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764586448,sku:"SEN0137",user_id:k,product:a,default_sort:339,sort_order_plus:b,_score:e,stock_name_status:j,product_id:1102,product_name:"Gravity: DHT22 Temperature &amp; Humidity Sensor",category_names:m,product_type:g,category_category_ids:n,tag:"Gravity, DHT22, AM2302, temperature &amp; humidity sensor, temperature and humidity sensor, DHT22 temperature and humidity sensor, arduino temperature &amp; humidity sensor, temperature sensor, humidity sensor",pm_tag:"Temperature & Humidity Sensor.PF,M.SL,Arduino IDE.IDE,Mind+.IDE,5V.WV,Environments.Scenario,Gravity.Brand,C++.PL,PH2.0.Interface",text:ay,href:"\u002FSEN0137\u002F",active:d},{id:"20499",material_id:h,title:az,subject:"sen0206\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1765026639,sku:"SEN0206",user_id:k,product:a,default_sort:372,sort_order_plus:b,_score:e,stock_name_status:j,product_id:1495,product_name:"Gravity: I2C Non-contact IR Temperature Sensor For Arduino (MLX90614-DCC)",category_names:m,product_type:g,category_category_ids:n,tag:"SEN0206, infrared temperature, MLX90614, Thermometer, temperature,Gravity, Temperature \u002F Humidity",pm_tag:"Mind+.IDE,Arduino IDE.IDE,Production.Scenario,C++.PL,PH2.0.Interface,M+.SL,3.3V.WV,Gravity.Brand,I2C.ToS,Temperature & Humidity Sensor.PF,5V.WV",text:az,href:"\u002FSEN0206\u002F",active:d},{id:"18542",material_id:h,title:aA,subject:"sen0236\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764671301,sku:"SEN0236",user_id:k,product:a,default_sort:536,sort_order_plus:b,_score:e,stock_name_status:j,product_id:1606,product_name:"Gravity: I2C BME280 Environmental Sensor",category_names:m,product_type:g,category_category_ids:n,tag:"SEN0236, environmental sensor, BME280, temperature, humidity, air pressure, barometer, pressure, humidity sensor, Gravity, Gas \u002F Air",pm_tag:"Temperature & Humidity Sensor.PF,Mind+.IDE,3.3V.WV,PH2.0.Interface,5V.WV,Gravity.Brand,Arduino IDE.IDE,I2C.ToS,C++.PL,M.SL,Environments.Scenario",text:aA,href:"\u002FSEN0236\u002F",active:d},{id:"17441",material_id:h,title:aB,subject:"dfr0067\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764586418,sku:"DFR0067",user_id:k,product:a,default_sort:597,sort_order_plus:b,_score:e,stock_name_status:j,product_id:A,product_name:"Gravity: DHT11 Temperature &amp; Humidity Sensor For Arduino",category_names:m,product_type:g,category_category_ids:n,tag:"Temperature Sensor,DHT11,DFR0067,Humidity,Gravity,Temperature \u002F Humidity",pm_tag:"Arduino IDE.IDE,5V.WV,M+.SL,Mind+.IDE,C++.PL,Environments.Scenario,Temperature & Humidity Sensor.PF,Gravity.Brand,PH2.0.Interface,3.3V.WV",text:aB,href:"\u002FDFR0067\u002F",active:d},{id:"20493",material_id:h,title:aC,subject:"sen0629\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1765026636,sku:"SEN0629",user_id:k,product:a,default_sort:614,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2918,product_name:"Fermion: BME688 AI Environmental Sensor (VOC, Temperature, Humidity, Pressure)",category_names:v,product_type:g,category_category_ids:w,tag:"SEN0629 , Temperature, Humidity , Temperature, Humidity, Barometric Pressure, Altitude, VOC, Environmental, AI Sensor, Air Quality, Fermion",pm_tag:a,text:aC,href:"\u002FSEN0629\u002F",active:d},{id:"18573",material_id:h,title:aD,subject:"sen0227\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764671319,sku:"SEN0227",user_id:k,product:a,default_sort:951,sort_order_plus:b,_score:e,stock_name_status:j,product_id:1636,product_name:"SHT20 I2C Temperature &amp; Humidity Sensor (Waterproof Probe)",category_names:Q,product_type:g,category_category_ids:R,tag:"SEN0227, temperature, humidity, temperature &amp; humidity sensor, SHT20, sht20, intelligent agriculture, sht10, waterproof",pm_tag:"Other Brands.Brand,Environments.Scenario,3.3V.WV,Temperature & Humidity Sensor.PF,I2C.ToS,Arduino IDE.IDE,C++.PL,5V.WV,MP.SL",text:aD,href:"\u002FSEN0227\u002F",active:d},{id:"19422",material_id:h,title:aE,subject:"sen0248\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764754958,sku:"SEN0248",user_id:k,product:a,default_sort:968,sort_order_plus:b,_score:e,stock_name_status:j,product_id:1697,product_name:"Gravity: I2C BME680 Environmental Sensor ",category_names:m,product_type:g,category_category_ids:n,tag:"SEN0248, BME680, environment, VOC, gas, barometer, temperature, humidity, altitude, height, TVOC, air quality, CCS811, bosch,Gravity, Gas \u002F Air",pm_tag:"Arduino IDE.IDE,Environments.Scenario,3.3V.WV,PH2.0.Interface,I2C.ToS,Gravity.Brand,5V.WV,M.SL,Temperature & Humidity Sensor.PF,C++.PL,Mind+.IDE",text:aE,href:"\u002FSEN0248\u002F",active:d},{id:"18674",material_id:h,title:aF,subject:"sen0148\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764671372,sku:"SEN0148",user_id:k,product:a,default_sort:980,sort_order_plus:b,_score:e,stock_name_status:j,product_id:912,product_name:"Digital Temperature &amp; Humidity Sensor (With Stainless Steel Probe)",category_names:q,product_type:g,category_category_ids:r,tag:"Stainless,SHT1x,Moisture,humidity,temperature,probe,SEN0148,Gravity, Temperature \u002F Humidity",pm_tag:"C++.PL,Temperature & Humidity Sensor.PF,Test and Measurement.Scenario,Arduino IDE.IDE,Other Brands.Brand,Digital.ToS,Pin.Interface,5V.WV,Production.Scenario,MP.SL,Environments.Scenario",text:aF,href:"\u002FSEN0148\u002F",active:d},{id:"19391",material_id:h,title:aG,subject:"sen0428\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764754939,sku:"SEN0428",user_id:u,product:a,default_sort:1032,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2437,product_name:"Fermion: SHT40 Temperature &amp; Humidity Sensor (Breakout)",category_names:v,product_type:g,category_category_ids:w,tag:"SEN0428, SHT, temperature\u002Fhumidity, temperature, humidity, sensirion, 40, fermion, sht40 arduino, sht40 sensor, sersirion sht40, sht40 raspberry pi, sht temperature sensor, sensirion temperature\u002Fhumidity sensor, sht40",pm_tag:"Temperature & Humidity Sensor.PF,Test and Measurement.Scenario,3.3V.WV,Environments.Scenario,5V.WV,Prototyping.Scenario,Fermion.Brand,I2C.ToS,Pin.Interface,C++.PL,Breakout.FF,MP.SL",text:aG,href:"\u002FSEN0428\u002F",active:d},{id:"17397",material_id:h,title:aH,subject:"dfr0023\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764586397,sku:"DFR0023",user_id:k,product:a,default_sort:1126,sort_order_plus:b,_score:e,stock_name_status:j,product_id:76,product_name:"Gravity: Analog LM35 Temperature Sensor For Arduino",category_names:B,product_type:g,category_category_ids:C,tag:"LM35,Sensor,Temperature,Arduino,DFR0023,Gravity, Temperature \u002F Humidity",pm_tag:"3.3V.WV,PH2.0.Interface,Analog.ToS,5V.WV,Arduino IDE.IDE,C++.PL,M.SL,Environments.Scenario,Mind+.IDE,Temperature & Humidity Sensor.PF,Gravity.Brand",text:aH,href:"\u002FDFR0023\u002F",active:d},{id:"21079",material_id:h,title:aI,subject:"sen0501\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1765246453,sku:"SEN0501",user_id:k,product:a,default_sort:1183,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2528,product_name:"Gravity: High Accuracy Temperature, Humidity, Pressure, Ambient Light and UV Sensor - I2C\u002FUART",category_names:B,product_type:g,category_category_ids:C,tag:"SEN0501, Gravity, SHTC3, BMP280, VEML7700, ML8511, temperature and humidity sensor, pressure sensor, barometric pressure sensor, ambient light sensor, UV sensor, environmental sensor, environmental monitoring",pm_tag:"Other Sensors.PF,C++.PL,I2C.ToS,5V.WV,3.3V.WV,MP.SL,UART.ToS,Class.Scenario,Project.Scenario,Environments.Scenario,Gravity.Brand,PH2.0.Interface",text:aI,href:"\u002FSEN0501\u002F",active:d},{id:"18545",material_id:h,title:aJ,subject:"sen0497\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764671302,sku:"SEN0497",user_id:k,product:a,default_sort:1241,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2391,product_name:"Gravity: DHT20 Temperature &amp; Humidity Sensor for Arduino",category_names:B,product_type:g,category_category_ids:C,tag:"SEN0497, Temperature &amp; Humidity sensor, temperature &amp; humidity detection, DHT20, DHT11, temperature sensor, humidity sensor, sensor, SEN0497, Temperature &amp; Humidity sensor, temperature &amp; humidity detection, DHT20, DHT11, temperature sensor, humidity sensor",pm_tag:"Test and Measurement.Scenario,C++.PL,M+.SL,I2C.ToS,Temperature & Humidity Sensor.PF,3.3V.WV,Gravity.Brand,PH2.0.Interface,Mind+.PL,Project.Scenario,Environments.Scenario,5V.WV,MEMS.ST",text:aJ,href:"\u002FSEN0497\u002F",active:d},{id:"19331",material_id:h,title:X,subject:"sen0528\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764754900,sku:"SEN0528",user_id:k,product:a,default_sort:1435,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2604,product_name:X,category_names:B,product_type:g,category_category_ids:C,tag:"sen0528, aht20 arduino, aht20 sensor, aht20 temperature and humidity sensor, aht20, temperature and humidity sensors",pm_tag:"PH2.0.Interface,C++.PL,Test and Measurement.Scenario,Gravity.Brand,I2C.ToS,5V.WV,MP.SL,Environments.Scenario,3.3V.WV,Temperature & Humidity Sensor.PF",text:X,href:"\u002FSEN0528\u002F",active:d},{id:"18584",material_id:h,title:Y,subject:"sen0198\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764671325,sku:"SEN0198",user_id:k,product:a,default_sort:1436,sort_order_plus:b,_score:e,stock_name_status:j,product_id:1474,product_name:Y,category_names:m,product_type:g,category_category_ids:n,tag:"SEN0198, Temperature sensor, PT100, hot environment,Gravity, Temperature \u002F Humidity",pm_tag:"Analog.ToS,5V.WV,Temperature & Humidity Sensor.PF,Arduino IDE.IDE,Gravity.Brand,Environments.Scenario,C++.PL,3.3V.WV,M+.SL",text:Y,href:"\u002FSEN0198\u002F",active:d},{id:"20558",material_id:h,title:aK,subject:"sen0500\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1765026680,sku:"SEN0500",user_id:k,product:a,default_sort:1477,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2522,product_name:"Fermion: Temperature &amp; Humidity(SHTC3), Pressure(BMP280), Ambient Light(VEML7700) and UV(ML8511) Sensor(Breakout)",category_names:v,product_type:g,category_category_ids:w,tag:"SEN0500, SHTC3, BMP280, VEML7700, ML8511, temperature and humidity sensor, pressure sensor, barometric pressure sensor, ambient light sensor, UV sensor, environmental sensor, environmental monitoring, Fermion, environmental breakout",pm_tag:"MP.SL,UART.ToS,Project.Scenario,Environments.Scenario,Castellated holes.Interface,C++.PL,Pin.Interface,Fermion.Brand,Other Sensors.PF,I2C.ToS,3.3V.WV,Breakout.FF",text:aK,href:"\u002FSEN0500\u002F",active:d},{id:"21164",material_id:h,title:aL,subject:"sen0333\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:aM,sku:"SEN0333",user_id:u,product:a,default_sort:1568,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2016,product_name:"Fermion: SHT35 Digital Temperature &amp; Humidity Sensor (Breakout)",category_names:D,product_type:g,category_category_ids:E,tag:"SEN0333, Humidity, Temperature, Temperature&amp;Humidity, SHT35, Digital, High precise, breakout, Fermion",pm_tag:aN,text:aL,href:"\u002FSEN0333\u002F",active:d},{id:"17381",material_id:h,title:aO,subject:"dfr0024\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764586389,sku:"DFR0024",user_id:k,product:a,default_sort:1570,sort_order_plus:b,_score:e,stock_name_status:j,product_id:164,product_name:"Gravity: DS18B20 Temperature Sensor  (Arduino Compatible)",category_names:m,product_type:g,category_category_ids:n,tag:"Gravity, Temperature \u002F Humidity, Temperature sensor,DFR0024, 18b20 arduino sensor",pm_tag:"M+.SL,Arduino IDE.IDE,C++.PL,Environments.Scenario,Digital.ToS,Mind+.IDE,Temperature & Humidity Sensor.PF,Gravity.Brand,3.3V.WV,PH2.0.Interface,5V.WV",text:aO,href:"\u002FDFR0024\u002F",active:d},{id:"19412",material_id:h,title:aP,subject:"sen0375\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764754952,sku:"SEN0375",user_id:k,product:a,default_sort:1572,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2143,product_name:"Fermion: BME680 Environmental Sensor (Breakout)",category_names:D,product_type:g,category_category_ids:E,tag:"SEN0375, BME680, BME, Temperature, Humidity, Organic Compounds, Barometric Pressure, VOC, Air quality, Environment, Fermion",pm_tag:"I2C.ToS,Arduino IDE.IDE,C++.PL,Temperature & Humidity Sensor.PF,Pin.Interface,3.3V.WV,MP.SL,5V.WV,Fermion.Brand,Prototyping.Scenario",text:aP,href:"\u002FSEN0375\u002F",active:d},{id:"17566",material_id:h,title:aQ,subject:"sen0256\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764586486,sku:"SEN0256",user_id:k,product:a,default_sort:1596,sort_order_plus:b,_score:e,stock_name_status:j,product_id:1823,product_name:"TS01 Non-Contact Analog Infrared Temperature Sensor (-70℃~270℃, IP65, 0-3V)",category_names:Q,product_type:g,category_category_ids:R,tag:aR,pm_tag:"C++.PL,M+.SL,IoT.TT,DF Others.Brand,Automation.Scenario,12V.WV,Prototyping.Scenario,24V.WV,Arduino IDE.IDE,Analog.ToS,Production.Scenario,Temperature & Humidity Sensor.PF,5V.WV,Pin.Interface",text:aQ,href:"\u002FSEN0256\u002F",active:d},{id:"20158",material_id:h,title:aS,subject:"dfr0588\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764845062,sku:"DFR0588",user_id:k,product:a,default_sort:1691,sort_order_plus:b,_score:e,stock_name_status:j,product_id:1920,product_name:"Gravity: Analog SHT30 Temperature &amp; Humidity Sensor",category_names:m,product_type:g,category_category_ids:n,tag:"DFR0588, SHT30, temperature, humidity, Gravity, sensor, analog",pm_tag:"Mind+.IDE,M.SL,Analog.ToS,3.3V.WV,Temperature & Humidity Sensor.PF,5V.WV,Gravity.Brand,Arduino IDE.IDE,PH2.0.Interface,Environments.Scenario,C++.PL",text:aS,href:"\u002FDFR0588\u002F",active:d},{id:"19359",material_id:h,title:aT,subject:"sen0414\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764754917,sku:"SEN0414",user_id:k,product:a,default_sort:1827,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2436,product_name:"Fermion: SHTC3 Temperature &amp; Humidity Sensor (Breakout)",category_names:v,product_type:g,category_category_ids:w,tag:"SEN0414, SHT, temperature\u002Fhumidity, temperature, humidity, sensirion, C3, fermion, shtc3 arduino, shtc3 sensor, sersirion shtc3, shtc3 raspberry pi, sht temperature sensor, sensirion temperature\u002Fhumidity sensor, shtc3",pm_tag:"3.3V.WV,Environments.Scenario,Fermion.Brand,5V.WV,Test and Measurement.Scenario,Temperature & Humidity Sensor.PF,I2C.ToS,Pin.Interface,C++.PL,Breakout.FF,MP.SL,Prototyping.Scenario",text:aT,href:"\u002FSEN0414\u002F",active:d},{id:"21795",material_id:h,title:aU,subject:"sen0435\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1765273313,sku:"SEN0435",user_id:k,product:a,default_sort:2034,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2546,product_name:"Fermion: MCP9808 High Accuracy I2C Temperature Sensor",category_names:v,product_type:g,category_category_ids:w,tag:"SEN0435, mcp9808 arduino, mcp9808 temperature sensor, i2c temperature sensor arduino, i2c temperature &amp; humidity sensor, mcp9808 breakout board",pm_tag:"I2C.ToS,Temperature & Humidity Sensor.PF,Breakout.FF,5V.WV,Prototyping.Scenario,Test and Measurement.Scenario,DF Others.Brand,Environments.Scenario,3.3V.WV,Pin.Interface,C++.PL,MP.SL,Fermion.Brand",text:aU,href:"\u002FSEN0435\u002F",active:d},{id:"18666",material_id:h,title:aV,subject:"sen0527\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764671368,sku:"SEN0527",user_id:k,product:a,default_sort:2089,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2603,product_name:"Fermion: AHT20 Temperature and Humidity Sensor (Breakout)",category_names:v,product_type:g,category_category_ids:w,tag:"sen0527, aht20 arduino, aht20 sensor, aht20 temperature and humidity sensor, aht20, temperature and humidity sensors",pm_tag:"Pin.Interface,Environments.Scenario,3.3V.WV,Temperature & Humidity Sensor.PF,C++.PL,Test and Measurement.Scenario,Breakout.FF,I2C.ToS,5V.WV,MP.SL,Fermion.Brand",text:aV,href:"\u002FSEN0527\u002F",active:d},{id:"19346",material_id:h,title:aW,subject:"sen0434\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764754909,sku:"SEN0434",user_id:k,product:a,default_sort:2350,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2548,product_name:"Fermion: STS35 High Accuracy Digital Temperature Sensor (Breakout)",category_names:v,product_type:g,category_category_ids:w,tag:"SEN0434, sts35 breakout, sensirion temperature sensor, environment temperature sensor, air temperature sensor, sts35-dis, buy sts35-dis, sts35dis, sensirion sts35-dis, sts35-dis sensirion",pm_tag:"3.3V.WV,Pin.Interface,C++.PL,MP.SL,Fermion.Brand,I2C.ToS,Temperature & Humidity Sensor.PF,Breakout.FF,5V.WV,Prototyping.Scenario,Test and Measurement.Scenario,Environments.Scenario",text:aW,href:"\u002FSEN0434\u002F",active:d},{id:"19301",material_id:h,title:aX,subject:"dfr0558\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764754878,sku:"DFR0558",user_id:k,product:a,default_sort:2592,sort_order_plus:b,_score:e,stock_name_status:j,product_id:1753,product_name:"Gravity: I2C High Temperature Sensor (K-Type, 800℃)",category_names:m,product_type:g,category_category_ids:n,tag:"Gravity, Temperature sensor, K type thermalcouple, high temperature, digital sensor, max31855, high temperature sensor, arduino temperature sensor, arduino high temperature sensor",pm_tag:"Gravity.Brand,PH2.0.Interface,Arduino IDE.IDE,Lab.Scenario,MP.SL,Test and Measurement.Scenario,Production.Scenario,Temperature & Humidity Sensor.PF,C++.PL,5V.WV,3.3V.WV,I2C.ToS,Python.PL",text:aX,href:"\u002FDFR0558\u002F",active:d},{id:"23273",material_id:h,title:Z,subject:"sen0656\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1770025409,sku:"SEN0656",user_id:k,product:a,default_sort:3129,sort_order_plus:b,_score:e,stock_name_status:j,product_id:3001,product_name:Z,category_names:B,product_type:g,category_category_ids:C,tag:"SEN0656, Gravity CT1780 1-Wire K-Type Thermocouple Amplifier, K-Type thermocouple for oven, high temperature sensor for furnace, 1-wire temperature measurement, ceramic kiln sensor, Arduino high temperature sensor, Raspberry Pi thermocouple, one wire sensor, CT1780, high temp sensor, cold-junction compensated, thermocouple amplifier, industrial temperature sensor, Gravity sensor",pm_tag:a,text:Z,href:"\u002FSEN0656\u002F",active:d},{id:"17650",material_id:h,title:aY,subject:"sen0546\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764586531,sku:"SEN0546",user_id:k,product:a,default_sort:252,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2600,product_name:"I2C Temperature &amp; Humidity Sensor (Stainless Steel Shell)",category_names:q,product_type:g,category_category_ids:r,tag:"sen0546, i2c temperature sensor arduino, temperature and humidity sensor, temperature and humidity module, temperature &amp; humidity collection module, temperature and humidity detection, temperature and humidity sensor module, digital temperature and humidity sensor",pm_tag:"3.3V.WV,Python.PL,I2C.ToS,5V.WV,Test and Measurement.Scenario,Pin.Interface,MP.SL,C++.PL,Temperature & Humidity Sensor.PF,Other Brands.Brand,Environments.Scenario,Production.Scenario",text:aY,href:"\u002FSEN0546\u002F",active:d},{id:"19376",material_id:h,title:aZ,subject:"sen0600\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764754928,sku:"SEN0600",user_id:k,product:a,default_sort:265,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2816,product_name:"RS485 MODBUS-RTU IP68 Soil Temperature &amp; Moisture Sensor for Automatic Irrigation (Arduino Compatible)",category_names:q,product_type:g,category_category_ids:r,tag:"SEN0600, Soil Sensor, RS485 Soil Sensor, Soil Temperature sensor, Soil Moisture Sensor, Soil Humidity Sensor, Soil Measure Sensor, IP68 Waterproof Soil Sensor, MODBUS-RTU Soil Sensor",pm_tag:"RS485.ToS,Lab.Scenario,DF Others.Brand,5V.WV,Arduino IDE.IDE,M+.SL,C++.PL,Pin.Interface,24V.WV,19V.WV,12V.WV,Project.Scenario,Temperature & Humidity Sensor.PF,Test and Measurement.Scenario",text:aZ,href:"\u002FSEN0600\u002F",active:d},{id:"20509",material_id:h,title:a_,subject:"sen0601\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1765026645,sku:"SEN0601",user_id:k,product:a,default_sort:512,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2817,product_name:"RS485 Soil Temperature, Moisture, EC Sensor for Climate Control in Greenhouses (IP68, 5-30V, Arduino Compatible)",category_names:q,product_type:g,category_category_ids:r,tag:"SEN0601, Soil Sensor, RS485 Soil Sensor, Soil Temperature sensor, Soil Moisture Sensor, Soil Humidity Sensor, Soil Measure Sensor, IP68 Waterproof Soil Sensor, EC Soil Sensor, EC Sensor, electrical conductivity sensor",pm_tag:"5V.WV,Arduino IDE.IDE,M+.SL,C++.PL,Pin.Interface,24V.WV,19V.WV,12V.WV,Project.Scenario,Temperature & Humidity Sensor.PF,Test and Measurement.Scenario,RS485.ToS,Lab.Scenario,DF Others.Brand",text:a_,href:"\u002FSEN0601\u002F",active:d},{id:"17430",material_id:h,title:a$,subject:"sen0114\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764586413,sku:"SEN0114",user_id:k,product:a,default_sort:588,sort_order_plus:b,_score:e,stock_name_status:j,product_id:599,product_name:"Gravity: Analog Soil Moisture Sensor for Arduino &amp; Raspberry Pi",category_names:m,product_type:g,category_category_ids:n,tag:"SEN0114,Gravity, soil moisture sensor, soil moisture, moisture sensor, soil sensor, resistance soil moisture sensor, arduino soil moisture sensor, soil moisture sensor for arduino, arduino soil sensor",pm_tag:"C++.PL,5V.WV,Arduino IDE.IDE,Gravity.Brand,M.SL,Analog.ToS,PH2.0.Interface,3.3V.WV,Temperature & Humidity Sensor.PF",text:a$,href:"\u002FSEN0114\u002F",active:d},{id:"22445",material_id:h,title:ba,subject:"sen0263\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1767693297,sku:"SEN0263",user_id:k,product:a,default_sort:654,sort_order_plus:b,_score:e,stock_name_status:j,product_id:1745,product_name:"Gravity: I2C Non-contact IR Temperature Sensor (MLX90614-DCI)",category_names:m,product_type:g,category_category_ids:n,tag:"infrared temperature, mlx90614, thermometer, mlx90614-dci",pm_tag:"Arduino IDE.IDE,5V.WV,I2C.ToS,Production.Scenario,Temperature & Humidity Sensor.PF,PH2.0.Interface,Gravity.Brand,3.3V.WV,Project.Scenario,Automation.Scenario,M.SL,Mind+.IDE",text:ba,href:"\u002FSEN0263\u002F",active:d},{id:"20505",material_id:h,title:bb,subject:"sen0617\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1765026643,sku:"SEN0617",user_id:k,product:a,default_sort:O,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2871,product_name:"Gravity: BME688 AI Environmental Sensor (VOC, Temperature, Humidity, Pressure)",category_names:m,product_type:g,category_category_ids:n,tag:"SEN0617, Temperature, Humidity, Temperature, Humidity, Barometric Pressure, Altitude, VOC, Environmental sense, AI Sensor, Air Quality",pm_tag:a,text:bb,href:"\u002FSEN0617\u002F",active:d},{id:"21779",material_id:h,title:bc,subject:"sen0334\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1765273306,sku:"SEN0334",user_id:u,product:a,default_sort:848,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2014,product_name:"Gravity: SHT31-F Digital Temperature and Humidity Sensor",category_names:m,product_type:g,category_category_ids:n,tag:"SEN0334, Humidity, Temperature, Temperature&amp;Humidity, SHT31, SHT31F, Digital, High precise, sensor, SHT31-D, Gravity",pm_tag:"5V.WV,I2C.ToS,Temperature & Humidity Sensor.PF,PH2.0.Interface,Mind+.IDE,M+.SL,Arduino IDE.IDE,Environments.Scenario,3.3V.WV,C++.PL,Gravity.Brand",text:bc,href:"\u002FSEN0334\u002F",active:d},{id:"19420",material_id:h,title:bd,subject:"sen0602\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764754957,sku:"SEN0602",user_id:k,product:a,default_sort:957,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2818,product_name:"RS485 Soil pH, Moisture, Temperature Monitoring Sensor for Hydroponics (IP68, 5-30V)",category_names:q,product_type:g,category_category_ids:r,tag:"SEN0602, Soil Sensor, RS485 Soil Sensor, Soil Temperature sensor, Soil Moisture Sensor, Soil Humidity Sensor, Soil Measure Sensor, IP68 Waterproof Soil Sensor, EC Soil Sensor, pH sensor",pm_tag:"12V.WV,Project.Scenario,Temperature & Humidity Sensor.PF,Test and Measurement.Scenario,RS485.ToS,Lab.Scenario,DF Others.Brand,5V.WV,Arduino IDE.IDE,M+.SL,C++.PL,Pin.Interface,24V.WV,19V.WV",text:bd,href:"\u002FSEN0602\u002F",active:d},{id:"21163",material_id:h,title:be,subject:"sen0331\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:aM,sku:"SEN0331",user_id:u,product:a,default_sort:1830,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2013,product_name:"Fermion: SHT31 Digital Temperature &amp; Humidity Sensor (Breakout)",category_names:D,product_type:g,category_category_ids:E,tag:"SEN0331, Humidity, Temperature, Temperature&amp;Humidity, SHT31, Digital, High precise, sensor, Fermion",pm_tag:aN,text:be,href:"\u002FSEN0331\u002F",active:d},{id:"21781",material_id:h,title:bf,subject:"sen0332\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1765273307,sku:"SEN0332",user_id:u,product:a,default_sort:1848,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2015,product_name:"Fermion: SHT31-F Digital Temperature &amp; Humidity Sensor (Breakout)",category_names:D,product_type:g,category_category_ids:E,tag:"Humidity, Temperature, Temperature&amp;Humidity, SHT31, SHT31-F, Digital, High precise, breakout, Fermion, SHT31-D",pm_tag:"I2C.ToS,Temperature & Humidity Sensor.PF,Fermion.Brand,Pin.Interface,M+.SL,Arduino IDE.IDE,Environments.Scenario,3.3V.WV,C++.PL,5V.WV",text:bf,href:"\u002FSEN0332\u002F",active:d},{id:"17582",material_id:h,title:bg,subject:"sen0264\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764586494,sku:"SEN0264",user_id:k,product:a,default_sort:1925,sort_order_plus:b,_score:e,stock_name_status:j,product_id:1824,product_name:"TS01 Non-Contact Analog Infrared Temperature Sensor (-70℃~380℃, IP65, 4-20mA)",category_names:Q,product_type:g,category_category_ids:R,tag:aR,pm_tag:"Project.Scenario,Automation.Scenario,M.SL,Arduino IDE.IDE,I2C.ToS,12V.WV,C++.PL,Production.Scenario,Temperature & Humidity Sensor.PF,PH2.0.Interface,24V.WV,Gravity.Brand",text:bg,href:"\u002FSEN0264\u002F",active:d},{id:"21160",material_id:h,title:bh,subject:"sen0330\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1765246487,sku:"SEN0330",user_id:u,product:a,default_sort:2206,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2012,product_name:"Fermion: SHT30 Digital Temperature &amp; Humidity Sensor (Breakout)",category_names:D,product_type:g,category_category_ids:E,tag:"SEN0330, Humidity, Temperature, Temperature&amp;Humidity, SHT30, Digital, High precise, sensor, Fermion",pm_tag:"Fermion.Brand,Pin.Interface,M+.SL,Arduino IDE.IDE,Environments.Scenario,3.3V.WV,C++.PL,5V.WV,I2C.ToS,Temperature & Humidity Sensor.PF",text:bh,href:"\u002FSEN0330\u002F",active:d},{id:"18649",material_id:h,title:_,subject:"sen0254\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764671360,sku:"SEN0254",user_id:k,product:a,default_sort:3248,sort_order_plus:b,_score:e,stock_name_status:j,product_id:2022,product_name:_,category_names:Q,product_type:g,category_category_ids:R,tag:"Sensors, temperature sensors, infrared thermal camera",pm_tag:"Temperature & Humidity Sensor.PF",text:_,href:"\u002FSEN0254\u002F",active:d},{id:"20162",material_id:h,title:bi,subject:"bos0006\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764845064,sku:"BOS0006",user_id:$,product:a,default_sort:5407,sort_order_plus:b,_score:e,stock_name_status:F,product_id:3032,product_name:"BOSON: Steam Sensor i6",category_names:G,product_type:g,category_category_ids:H,tag:"BOSON Steam Sensor, water droplet sensor, fog detection, steam level switch, analog moisture sensor, Arduino environment projects, micro:bit rain gauge, DFRobot sensor",pm_tag:a,text:bi,href:"\u002FBOS0006\u002F",active:d},{id:"17576",material_id:h,title:bj,subject:"bos0041\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764586490,sku:"BOS0041",user_id:$,product:a,default_sort:5457,sort_order_plus:b,_score:e,stock_name_status:F,product_id:3060,product_name:"BOSON: Humidity Sensor i18",category_names:G,product_type:g,category_category_ids:H,tag:"BOSON Humidity Sensor i18, humidity sensor module, atmospheric humidity detection, DFRobot BOSON, PH2.0-3P connector, environmental monitoring, greenhouse climate control, meteorological sensor, room comfort control, Arduino humidity sensor, micro:bit humidity, industrial process control, smart home automation",pm_tag:a,text:bj,href:"\u002FBOS0041\u002F",active:d},{id:"19278",material_id:h,title:bk,subject:"bos0038\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764754866,sku:"BOS0038",user_id:k,product:a,default_sort:5465,sort_order_plus:b,_score:e,stock_name_status:F,product_id:3058,product_name:"BOSON: Soil Moisture Sensor i16",category_names:G,product_type:g,category_category_ids:H,tag:"BOSON Soil Moisture Sensor i16, analog moisture sensor, soil moisture measurement, DFRobot BOSON, PH2.0 connector, smart agriculture, automated watering system, Arduino moisture sensor, micro:bit soil sensor, environmental monitoring, plant care electronics, STEM education",pm_tag:a,text:bk,href:"\u002FBOS0038\u002F",active:d},{id:"18597",material_id:h,title:bl,subject:"bos0011\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764671332,sku:"BOS0011",user_id:k,product:a,default_sort:5469,sort_order_plus:b,_score:e,stock_name_status:F,product_id:3037,product_name:"Boson: Temperature Sensor i11",category_names:G,product_type:g,category_category_ids:H,tag:"BOSON Temperature Sensor i11, analog temperature sensor, thermal monitoring module, DFRobot BOSON, PH2.0-3P sensor, temperature measurement, thermistor module, semiconductor temperature, consumer electronics sensor, automotive thermal sensor, environmental monitoring, micro:bit temperature, Arduino thermal, analog signal sensor, smart home temperature",pm_tag:a,text:bl,href:"\u002FBOS0011\u002F",active:d},{id:"18653",material_id:h,title:bm,subject:"bos0042\u002F",type:f,platform:i,status:c,show:c,orderBy:b,addtime:1764671362,sku:"BOS0042",user_id:$,product:a,default_sort:5487,sort_order_plus:b,_score:e,stock_name_status:F,product_id:3061,product_name:"BOSON: Waterproof Temperature Sensor i19",category_names:G,product_type:g,category_category_ids:H,tag:"BOSON Waterproof Temperature Sensor i19, waterproof temperature sensor, DS18B20 module, analog temperature sensor, DFRobot BOSON, PH2.0-3P connector, cold storage monitoring, soil temperature measurement, wet condition sensor, Arduino temperature sensor, micro:bit thermal sensor, environmental monitoring, waterproof thermal probe",pm_tag:a,text:bm,href:"\u002FBOS0042\u002F",active:d}]},categorySelects:[{text:bn,value:"docs",selected:o,show:o,hasMore:e},{text:bo,value:"tech_specs",selected:d,show:o},{text:bp,value:"projects",selected:d,show:o}],wikiData:{cad:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_cad_",fileName:a,fileSize:a,fileUrl:a,pass:d,select:l,time:a,urlData:{}},ce:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_ce_",fileName:a,fileSize:a,fileUrl:a,pass:d,select:l,time:a,urlData:{}},content:"### Specification\n\n| Parameter                  | Details                                                                 |\n|----------------------------|-------------------------------------------------------------------------|\n| Power\u002FData Voltage         | 3.0V to 5.5V                                                            |\n| Accuracy                   | ±0.5℃ from -10℃ to +85℃                                                 |\n| Usable Temperature Range   | -55℃ to 125℃ (-67℉ to +257℉)                                           |\n| Resolution                 | 9 to 12 bit selectable                                                 |\n| Interface                  | 1-Wire interface - requires only one digital pin for communication      |\n| Unique ID                  | 64 bit ID burned into chip                                              |\n| Multiple Sensors           | Can share one pin                                                       |\n| Alarm System               | Temperature-limit alarm system                                          |\n| Query Time                 | Less than 750ms                                                         |\n| Interface Wires            | \u003Cbr\u003E- Red wire - VCC\u003Cbr\u003E- Black wire - GND\u003Cbr\u003E- Yellow wire - DATA\u003Cbr\u003E  |\n| Probe Dimensions           | Stainless steel tube 6mm diameter by 35mm long                         |\n| Cable Diameter             | 4mm                                                                     |\n| Cable Length               | 90cm                                                                    |\n\n![18b20 Dimensional Drawing .png](https:\u002F\u002Fdfimg.dfrobot.com\u002F645b699faa9508d63a42d7db\u002Fwikien\u002Fd883a45a77aacfb4163defba7b8dadb8.png \"18b20.png\")\n\n\n\n### Pinout\n\n- Red wire - VCC\n- Black wire - GND\n- Yellow wire - DATA",datasheet:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_datasheet_1.0",fileName:"DS18B20.pdf",fileSize:"383KB",fileUrl:aa,pass:o,select:l,time:1769050978127,urlData:{var:"1.0"}},desc:"The DS18B20 Waterproof Temperature Sensor is engineered for long-distance and wet conditions, providing reliable temperature readings up to 125℃. This digital sensor uses a 1-Wire interface, compatible with 3.0-5.5V systems, and features a unique serial number for each unit, enabling multiple sensors on the same bus. With its durable PVC cable recommended for use under 100℃, it ensures accurate readings without signal degradation over distance. Ideal for Arduino projects and various applications, this sensor is versatile and dependable in challenging environments.",dimension:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_dimension_",fileName:a,fileSize:a,fileUrl:a,pass:d,select:l,time:a,urlData:{}},driver:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_driver_",fileName:a,fileSize:a,fileUrl:a,pass:d,select:l,time:a,urlData:{}},en71:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_en71_",fileName:a,fileSize:a,fileUrl:a,pass:d,select:l,time:a,urlData:{}},fcc:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_fcc_",fileName:a,fileSize:a,fileUrl:a,pass:d,select:l,time:a,urlData:{}},gitHub:a,ic:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_ic_",fileName:a,fileSize:a,fileUrl:a,pass:d,select:l,time:a,urlData:{}},kc:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_kc_",fileName:a,fileSize:a,fileUrl:a,pass:d,select:l,time:a,urlData:{}},layout:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_layout_",fileName:a,fileSize:a,fileUrl:a,pass:d,select:l,time:a,urlData:{}},library:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_library_:DFR0198_ds8b20-waterproof-temperature-sensor_library",fileName:"DFRobot DFR0198.zip",fileSize:"380KB",fileUrl:ab,pass:o,select:l,time:1768640928074,urlData:{var:":DFR0198_ds8b20-waterproof-temperature-sensor_library"}},ogDesc:ac,ogTitle:ad,pName:"ds8b20-waterproof-temperature-sensor",pfas:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_pfas_",fileName:a,fileSize:a,fileUrl:a,pass:d,select:l,time:a,urlData:{}},rcm:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_rcm_",fileName:a,fileSize:a,fileUrl:a,pass:d,select:l,time:a,urlData:{}},reach:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_reach_",fileName:a,fileSize:a,fileUrl:a,pass:d,select:l,time:a,urlData:{}},rohs:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_rohs_",fileName:a,fileSize:a,fileUrl:a,pass:d,select:l,time:a,urlData:{}},schematics:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_schematics_",fileName:a,fileSize:a,fileUrl:a,pass:d,select:l,time:a,urlData:{}},seoDesc:bq,seoKey:br,seoTitle:S,show:c,sku:p,stpFiles:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_stpfile_",fileName:a,fileSize:a,fileUrl:a,pass:d,select:l,time:a,urlData:{}},structuredDesc:bs,subjectUrl:a,svg:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_svg_",fileName:a,fileSize:a,fileUrl:a,pass:d,select:l,time:a,urlData:{}},telec:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_telec_",fileName:a,fileSize:a,fileUrl:a,pass:d,select:l,time:a,urlData:{}},title:N,type:f,ukca:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_ukca_",fileName:a,fileSize:a,fileUrl:a,pass:d,select:l,time:a,urlData:{}},weee:{draftName:"DFR0198_ds8b20-waterproof-temperature-sensor_weee_",fileName:a,fileSize:a,fileUrl:a,pass:d,select:l,time:a,urlData:{}},id:17518,updatetime:"2025-12-01 18:54:19"},techSpecs:"\u003Ch3\u003ESpecification\u003C\u002Fh3\u003E\n\u003Cdiv class=\"table-box\"\u003E\u003Ctable\u003E\n\u003Cthead\u003E\n\u003Ctr\u003E\n\u003Cth\u003EParameter\u003C\u002Fth\u003E\n\u003Cth\u003EDetails\u003C\u002Fth\u003E\n\u003C\u002Ftr\u003E\n\u003C\u002Fthead\u003E\n\u003Ctbody\u003E\n\u003Ctr\u003E\n\u003Ctd\u003EPower\u002FData Voltage\u003C\u002Ftd\u003E\n\u003Ctd\u003E3.0V to 5.5V\u003C\u002Ftd\u003E\n\u003C\u002Ftr\u003E\n\u003Ctr\u003E\n\u003Ctd\u003EAccuracy\u003C\u002Ftd\u003E\n\u003Ctd\u003E±0.5℃ from -10℃ to +85℃\u003C\u002Ftd\u003E\n\u003C\u002Ftr\u003E\n\u003Ctr\u003E\n\u003Ctd\u003EUsable Temperature Range\u003C\u002Ftd\u003E\n\u003Ctd\u003E-55℃ to 125℃ (-67℉ to +257℉)\u003C\u002Ftd\u003E\n\u003C\u002Ftr\u003E\n\u003Ctr\u003E\n\u003Ctd\u003EResolution\u003C\u002Ftd\u003E\n\u003Ctd\u003E9 to 12 bit selectable\u003C\u002Ftd\u003E\n\u003C\u002Ftr\u003E\n\u003Ctr\u003E\n\u003Ctd\u003EInterface\u003C\u002Ftd\u003E\n\u003Ctd\u003E1-Wire interface - requires only one digital pin for communication\u003C\u002Ftd\u003E\n\u003C\u002Ftr\u003E\n\u003Ctr\u003E\n\u003Ctd\u003EUnique ID\u003C\u002Ftd\u003E\n\u003Ctd\u003E64 bit ID burned into chip\u003C\u002Ftd\u003E\n\u003C\u002Ftr\u003E\n\u003Ctr\u003E\n\u003Ctd\u003EMultiple Sensors\u003C\u002Ftd\u003E\n\u003Ctd\u003ECan share one pin\u003C\u002Ftd\u003E\n\u003C\u002Ftr\u003E\n\u003Ctr\u003E\n\u003Ctd\u003EAlarm System\u003C\u002Ftd\u003E\n\u003Ctd\u003ETemperature-limit alarm system\u003C\u002Ftd\u003E\n\u003C\u002Ftr\u003E\n\u003Ctr\u003E\n\u003Ctd\u003EQuery Time\u003C\u002Ftd\u003E\n\u003Ctd\u003ELess than 750ms\u003C\u002Ftd\u003E\n\u003C\u002Ftr\u003E\n\u003Ctr\u003E\n\u003Ctd\u003EInterface Wires\u003C\u002Ftd\u003E\n\u003Ctd\u003E\u003Cbr\u003E- Red wire - VCC\u003Cbr\u003E- Black wire - GND\u003Cbr\u003E- Yellow wire - DATA\u003Cbr\u003E\u003C\u002Ftd\u003E\n\u003C\u002Ftr\u003E\n\u003Ctr\u003E\n\u003Ctd\u003EProbe Dimensions\u003C\u002Ftd\u003E\n\u003Ctd\u003EStainless steel tube 6mm diameter by 35mm long\u003C\u002Ftd\u003E\n\u003C\u002Ftr\u003E\n\u003Ctr\u003E\n\u003Ctd\u003ECable Diameter\u003C\u002Ftd\u003E\n\u003Ctd\u003E4mm\u003C\u002Ftd\u003E\n\u003C\u002Ftr\u003E\n\u003Ctr\u003E\n\u003Ctd\u003ECable Length\u003C\u002Ftd\u003E\n\u003Ctd\u003E90cm\u003C\u002Ftd\u003E\n\u003C\u002Ftr\u003E\n\u003C\u002Ftbody\u003E\n\u003C\u002Ftable\u003E\u003C\u002Fdiv\u003E\n\u003Cp\u003E\u003Cimg src=\"https:\u002F\u002Fdfimg.dfrobot.com\u002F645b699faa9508d63a42d7db\u002Fwikien\u002Fd883a45a77aacfb4163defba7b8dadb8_0x0.png.webp\" alt=\"18b20 Dimensional Drawing .png\" title=\"18b20.png\"\u003E\u003C\u002Fp\u003E\n\u003Ch3\u003EPinout\u003C\u002Fh3\u003E\n\u003Cul\u003E\n\u003Cli\u003ERed wire - VCC\u003C\u002Fli\u003E\n\u003Cli\u003EBlack wire - GND\u003C\u002Fli\u003E\n\u003Cli\u003EYellow wire - DATA\u003C\u002Fli\u003E\n\u003C\u002Ful\u003E\n",downloadResources:[{text:bt,link:aa,icon:"icon-Datasheet_nor",download:o},{text:bu,link:ab,icon:"icon-Library_nor",download:o}],certifications:[],product:{product:{attribute:{black_friday_event_tags:"[{\"name\":\"Black Friday 2025\",\"sort_order\":174},{\"name\":\"enjoy discounts on the GLOBAL website\",\"sort_order\":160},{\"name\":\"Others GLOBAL\",\"sort_order\":160},{\"name\":\"enjoy discounts on the USA-1 website\",\"sort_order\":174},{\"name\":\"Others USA-1\",\"sort_order\":174}]",description:"Waterproof digital temperature sensor with a range of -55°C to 125°C. Connects via 1-Wire interface, suitable for humid environments and supports multiple sensors.",meta_description:"Discover the DS18B20 waterproof temperature sensor designed for remote or humid environments. Ideal for Arduino projects, it offers high accuracy and easy installation.",meta_keywords:"DS18B20, waterproof sensor, temperature measurement, Arduino sensor, digital sensor, 1-Wire interface, smart home, greenhouse farming, temperature accuracy, sensor integration",og_description:"Unlock the potential of remote temperature monitoring with the DS18B20 waterproof sensor. Perfect for Arduino projects, it simplifies installation and offers high accuracy!",og_title:"Explore the DS18B20 Waterproof Sensor for Accurate Temperature Tracking!",package_coupon_text:a,package_coupon_url:a,package_option:"[{\"option_name\":\"\",\"required\":\"0\",\"sort_order\":\"0\"}]",package_original_price_range:a,package_price_range:a,package_sub_fixed_amount:ae,package_sub_percentage:ae,package_type:ae,structured_description:"The DS18B20 waterproof temperature sensor offers accurate readings in humid environments with a 1-Wire interface, suitable for Arduino projects.",summary:"The DS18B20 waterproof sensor provides accurate temperature readings in humid environments, ideal for Arduino projects.",title:"Waterproof DS18B20 Temperature Sensor for Arduino"},available_for_sale:"Yes",black_friday_event_tags:[{name:"Black Friday 2025",sort_order:A},{name:"enjoy discounts on the GLOBAL website",sort_order:bv},{name:"Others GLOBAL",sort_order:bv},{name:"enjoy discounts on the USA-1 website",sort_order:A},{name:"Others USA-1",sort_order:A}],category:a,category_category_ids:r,category_names:q,cdy_type:a,create_time:1339948800,customer_group_id:8,date_added:"2012-06-18T00:00:00Z",date_available:"2012-06-17T00:00:00Z",date_modified:"2026-01-26T10:46:54Z",date_updated:"2026-04-18T05:36:22Z",default_sort:au,discontinued_product:a,discount:b,discount9:4.25,display_price:bw,ean:"6959420901906",for_search_category_names:"arduino sensors temperature &amp; humidity sensor all products",for_search_meta_keyword:"humidity sensor and waterproof digital ds18b20 temperature &amp;",for_search_model:"dfr0198",for_search_pm_tag:"5v.wv arduino temperature brands.brand digital.tos & humidity sensor.pf prototyping.scenario mp.sl ide.ide c++.pl 3.3v.wv other",for_search_product_name:"temperature for arduino (ip68 +85°c) waterproof ds18b20 digital sensor -10°c to",for_search_product_related_name:"industrial kit 32 carbon \u002F raspberry driver (high-precision (400-5000 ndir i2c display pump meter tb6600 stepper 4a) infrared co2 module v2.0 analog waterproof ppm) 16x2(1602) lcd terminal pi gravity: &amp; immersible 7\u002F24 pwm dioxide for arduino adapter moisture ph motor micro-step sensor soil watertube ds18b20 temperature",for_search_tag:"digital ds18b20 temperature sensor arduino waterproof",height:af,href:"https:\u002F\u002Fwww.dfrobot.com\u002Fproduct-689.html",image:"https:\u002F\u002Fdfimg.dfrobot.com\u002Fenshop\u002Fimage\u002Fdata\u002FDFR0198\u002FDFR0198_Main_01.jpg",image_alt:ag,isbn:a,jan:a,landing_tag:a,length:af,length_class_id:c,local_warehouse_quantity:58,location:"shanghai",main_category_category_id:"36",manufacturer:"Other",manufacturer_id:31,maxquantity:b,meta_keyword:"DS18B20, temperature &amp; humidity sensor, temperature and humidity sensor, temperature sensor, waterproof temperature sensor, humidity sensor, DS18B20 temperature sensor, digital temperature sensor",minimum:c,model:p,mpn:a,name:P,original_price:bw,pm_tag:aw,points:bx,price:y,product_90_quantity:by,product_90_times:24,product_90_times_rank:133,product_90_uv:323871,product_90_uv_rank:25,product_attributes:"{\"black_friday_event_tags\":\"[{\\\"name\\\":\\\"Black Friday 2025\\\",\\\"sort_order\\\":174},{\\\"name\\\":\\\"enjoy discounts on the GLOBAL website\\\",\\\"sort_order\\\":160},{\\\"name\\\":\\\"Others GLOBAL\\\",\\\"sort_order\\\":160},{\\\"name\\\":\\\"enjoy discounts on the USA-1 website\\\",\\\"sort_order\\\":174},{\\\"name\\\":\\\"Others USA-1\\\",\\\"sort_order\\\":174}]\",\"description\":\"Waterproof digital temperature sensor with a range of -55°C to 125°C. Connects via 1-Wire interface, suitable for humid environments and supports multiple sensors.\",\"meta_description\":\"Discover the DS18B20 waterproof temperature sensor designed for remote or humid environments. Ideal for Arduino projects, it offers high accuracy and easy installation.\",\"meta_keywords\":\"DS18B20, waterproof sensor, temperature measurement, Arduino sensor, digital sensor, 1-Wire interface, smart home, greenhouse farming, temperature accuracy, sensor integration\",\"og_description\":\"Unlock the potential of remote temperature monitoring with the DS18B20 waterproof sensor. Perfect for Arduino projects, it simplifies installation and offers high accuracy!\",\"og_title\":\"Explore the DS18B20 Waterproof Sensor for Accurate Temperature Tracking!\",\"package_coupon_text\":\"\",\"package_coupon_url\":\"\",\"package_option\":\"[{\\\"option_name\\\":\\\"\\\",\\\"required\\\":\\\"0\\\",\\\"sort_order\\\":\\\"0\\\"}]\",\"package_original_price_range\":\"\",\"package_price_range\":\"\",\"package_sub_fixed_amount\":\"0\",\"package_sub_percentage\":\"0\",\"package_type\":\"0\",\"structured_description\":\"The DS18B20 waterproof temperature sensor offers accurate readings in humid environments with a 1-Wire interface, suitable for Arduino projects.\",\"summary\":\"The DS18B20 waterproof sensor provides accurate temperature readings in humid environments, ideal for Arduino projects.\",\"title\":\"Waterproof DS18B20 Temperature Sensor for Arduino\"}",product_id:O,product_name:P,product_related_name:"I2C 16x2(1602) LCD Display Module for Arduino,Gravity: Terminal Sensor Adapter V2.0,Gravity: Analog Soil Moisture Sensor for Arduino &amp; Raspberry Pi,Immersible Pump &amp; WaterTube,Gravity: 7\u002F24 Industrial Analog pH Meter Kit for Arduino,Gravity: Waterproof DS18B20 Temperature Sensor Kit,TB6600 Stepper Motor Driver (High-Precision 32 Micro-step, 4A),Gravity: PWM NDIR Infrared Carbon Dioxide \u002F CO2 Sensor (400-5000 ppm)",product_type:g,quantity:b,quantity_USA_1:b,quantity_status:bz,quantity_status_USA_1:bz,sale_sort:by,sales:b,score:b,shipping:"1",sku:p,sort_order:c,sort_order_plus:b,source:"3",special:y,special9:b,special_end:a,special_end_time:b,special_priority:b,special_start_time:b,status:c,stock_name_status:j,stock_status:j,stock_status_id:5,stock_us:c,subtract:c,tag:av,tax_class_id:b,terminal_maximum:b,terminal_minimum:c,terminal_reward:bx,time_left_special:-1776462590,upc:a,upload_file:a,us_warehouse_quantity:A,video_link:a,video_thumb:a,viewed:267736,vimeo_link:a,weight:e,weight_class_id:ar,width:af},price_info:{product_id:O,origin_price:y,anniversary_discounted_sub_average_price:b,special_sub_average_price:b,tiered_sub_average_price:b,vip_sub_average_price:b,coupon_sub_average_price:b,special_price:b,tiered_price:b,origin_quantity:c,anniversary_discounted_quantity:b,special_quantity:b,tiered_quantity:b,vip_quantity:c,coupon_quantity:b,package_sub_average_price:b,item_total_price:y,item_subtotal_price:y,distributor_discount_sub_average_price:b,distributor_discount_quantity:b,product_weight:.035,product_sku:p,add_on_deal_sub_average_price:b,add_on_deal_quantity:b}},inSkuWhiteList:d,projects:[bA,bF],tutorials:[],courses:[],displayedProjects:[bA,bF],displayedCourses:[],docs:[{desc:bJ,develop:a,id:bK,modify:d,modifyTime:bL,name:ah,reference:b,shortTitle:ah,subject:"dfr0198\u002Fdocs\u002F18272",tasks:[],title:ah,wikiid:bK,text:bM,href:"\u002Fdfr0198\u002Fdocs\u002F18272",docIndex:c,children:[],expand:d,active:d,class:"doc"},{desc:a,develop:a,id:bN,modify:d,modifyTime:bL,name:I,reference:c,shortTitle:I,subject:"dfr0198\u002Fdocs\u002F18271",tasks:[],title:I,wikiid:bN,text:I,href:"\u002Fdfr0198\u002Fdocs\u002F18271",docIndex:b,children:[],expand:d,active:d,class:"reference"}],faqs:[],faqLink:"\u002Fforum\u002F",seo_tdk:{title:S,description:bq,keywords:br},seo_schema:{type:"application\u002Fld+json",json:{"@context":"https:\u002F\u002Fschema.org","@graph":[{"@type":"TechArticle","@id":"https:\u002F\u002Fwiki.dfrobot.com\u002FDFR0198\u002F#article",headline:S,description:bs,keywords:["DS18B20 waterproof sensor"," digital temperature sensor"," 1-Wire temperature sensor"," Arduino temperature sensor"," smart home temperature sensor"," temperature measurement sensor"," connect DS18B20 to Arduino"," best waterproof temperature sensor for greenhouse"," DS18B20 sensor for smart home automation"," DIY electronics enthusiasts"," smart home automation developers"," environmental monitoring tools"," educational electronics kits"],image:{"@id":ai},dateModified:"2025-12-01",author:{"@id":aj},publisher:{"@id":aj},speakable:{"@type":"SpeakableSpecification",cssSelector:[".wiki-introduction .desc"]},subjectOf:[{"@type":ak,name:bt,url:aa,fileFormat:"application\u002Fpdf"},{"@type":ak,name:bu,url:ab,fileFormat:"application\u002Fzip"},{"@type":"SoftwareSourceCode",name:bM,url:T,description:bJ},{"@type":ak,name:I,url:T,description:a},{"@type":bO,name:bC,author:{"@type":bP,name:bD},url:bE},{"@type":bO,name:bG,author:{"@type":bP,name:bH},url:bI}],mainEntity:{"@type":"ItemList",name:"Wiki Sections",itemListElement:[{"@type":x,position:c,url:"https:\u002F\u002Fwiki.dfrobot.com\u002FDFR0198\u002F#docs",name:bn},{"@type":x,position:bQ,url:"https:\u002F\u002Fwiki.dfrobot.com\u002FDFR0198\u002F#tech_specs",name:bo},{"@type":x,position:bR,url:"https:\u002F\u002Fwiki.dfrobot.com\u002FDFR0198\u002F#projects",name:bp}]},about:{"@type":"Thing",name:P,sku:p,"@id":"https:\u002F\u002Fwww.dfrobot.com\u002Fproduct-689.html#product",image:{"@id":ai},offers:{"@type":"Offer",price:y,priceCurrency:al},isPartOf:{"@type":"CreativeWorkSeries","@id":"https:\u002F\u002Fwiki.dfrobot.com\u002FDFR0198\u002F#series",name:N},hasCertification:[]}},{"@type":"CollectionPage","@id":"https:\u002F\u002Fwiki.dfrobot.com\u002FDFR0198\u002F#webpage",url:"https:\u002F\u002Fwiki.dfrobot.com\u002FDFR0198\u002F",name:a,mainEntity:{"@id":"https:\u002F\u002Fwiki.dfrobot.com\u002FDFR0198#article"},breadcrumb:{"@id":bS}},{"@type":"BreadcrumbList","@id":bS,itemListElement:[{"@type":x,position:c,name:f,item:bT},{"@type":x,position:bQ,name:t,item:"https:\u002F\u002Fwiki.dfrobot.com\u002Fcategory-36\u002F"},{"@type":x,position:bR,name:M,item:"https:\u002F\u002Fwiki.dfrobot.com\u002Fcategory-64\u002F"},{"@type":x,position:4,name:p,item:"https:\u002F\u002Fwiki.dfrobot.com\u002Fdfr0198\u002F"}]},{"@type":"ImageObject","@id":ai,contentUrl:"https:\u002F\u002Fdfimg.dfrobot.com\u002Fenshop\u002Fimage\u002Fdata\u002FDFR0198\u002FDFR0198_Main_01_360x240.jpg.webp",creditText:bU,creator:{"@type":bV,name:bU},publisher:{"@type":bV,"@id":aj}}]}},seo_meta_medias:[{hid:bW,property:bW,content:"en_US"},{hid:bX,property:bX,content:"website"},{hid:bY,property:bY,content:ad},{hid:bZ,property:bZ,content:ac},{hid:b_,property:b_,content:"https:\u002F\u002Fwiki.dfrobot.com\u002Fdfr0198"},{hid:b$,property:b$,content:S},{hid:ca,property:ca,content:cb},{hid:cc,property:cc,content:ag},{hid:cd,property:cd,content:"summary_large_image"},{hid:ce,property:ce,content:cf},{hid:cg,property:cg,content:cf},{hid:ch,property:ch,content:ad},{hid:ci,property:ci,content:ac},{hid:cj,property:cj,content:cb},{hid:ck,property:ck,content:ag}]}],fetch:{"0":{},"data-v-d71158b6:0":{jq:a,md5:{},tools:{},backName:"menu-back",pageType:a,viewType:L,deviceCss:[{rel:"stylesheet",href:"\u002Flibs\u002Fswiper\u002Fswiper-bundle.min.css"}],deviceJs:[{src:"\u002Fdfrobotshop\u002Flib\u002Fdfpclib.js",ssr:o}],showPL:d,userMenu:d,user:{identity:"unset"},storeMenu:cl,storeActive:c,login:d,userType:"guest",cartNum:b,searchkey:a,currency:al,currencyList:cB,showFastCategory:d,categories:[],timer_fastSearch:e,fastSearch:{loadingProduct:d,products:[],loadingBlog:d,blogs:[],loadingWiki:d,wikis:[]},navList:[{name:"Community",url:"https:\u002F\u002Fcommunity.dfrobot.com\u002F",target:K},{name:"Forum",url:"https:\u002F\u002Fwww.dfrobot.com\u002Fforum\u002F",target:K},{name:"Wiki",url:bT,target:K},{name:"Blog",url:"https:\u002F\u002Fwww.dfrobot.com\u002Fblog",target:K},{name:"Learn",url:"https:\u002F\u002Flearn.dfrobot.com\u002F",target:K}],items:[{title:ao},{title:ao},{title:ao},{title:"Click Me 2"}],menuStatus:a,mColor:"#000000",mtColor:"#ffffff",mNavShow:d,enableWarehouse:o},"data-v-0d8b5951:0":{jq:{},md5:{},tools:{},backName:"popbox-back",data:{name:a,size:a,url:a},tipsMsg:a,errorMsg:a,errorMsgBackFun:e,pop:{show:d,icon:a,title:a,subtitle:a,desc:a,yesText:a,noText:a,yesFun:e,noFun:e,autoClose:b},viewType:L}},error:e,state:{authUser:e,setting:{learn:[{link:"https:\u002F\u002Flearn.dfrobot.com\u002Fcourse-691.html",thumb:["https:\u002F\u002Fdfimg.dfrobot.com\u002F5caaf47fe9f1335a9d6ad8d6\u002Fdfapi\u002F6c9280468a6858d1d874c304f1f7ecc6.jpg"],title:"Get Started with Arduino: A Step-by-Step Tutorial"},{link:"https:\u002F\u002Flearn.dfrobot.com\u002Fcourse-668.html",thumb:["https:\u002F\u002Fdfimg.dfrobot.com\u002F5caaf47fe9f1335a9d6ad8d6\u002Fdfapi\u002F57e329cb6a8573e51a855f392fe747c2.jpg"],title:"Python Programming on Hardware for Beginners"}],seoDesc:"DFRobot provides open-source hardware, kits and robotics dedicated to bringing innovative electronics.",seoKeyword:"Arduino,LattePanda,Raspberry Pi,micro:bit,Gravity,Robotics,Internet of Things - IoT,FireBeetle,Artificial Intelligence,Fermion,STEM Education,Boson,esp8266 &amp; esp32,jeston nano",seoTitle:"DFRobot Open-Source Hardware Electronics and Kits",siteDesc:a,topBanner:{"USA-1":{bannerBg:[],bannerImg:[],bannerLink:a,bannerMobile:[],bannerTitle:a,begin:"2025-07-02 00:00:00",begin2:V,end:"2025-07-15 00:00:00",end2:V,message:"\u003Cp\u003EAnniversary Sale! 30% Off First Item + Free Shipping ($50+) \u003Ca target=\"_blank\" rel=\"noopener noreferrer\" href=\"https:\u002F\u002Fwww.dfrobot.com\u002F15th_anniversary\"\u003E➡️ Shop Now\u003C\u002Fa\u003E\u003C\u002Fp\u003E",onlyTest:d,warehouse:"USA-1"},GLOBAL:{bannerBg:[],bannerImg:[],bannerLink:a,bannerMobile:[],bannerTitle:a,begin:"2025-09-07 00:00:00",begin2:V,end:"2025-11-19 00:00:00",end2:V,message:"\u003Cp\u003EMAJOR LAUNCH: HUSKYLENS 2 6 TOPS LLM MCP AI Vision Sensor is now available. \u003Ca target=\"_blank\" rel=\"noopener noreferrer\" href=\"https:\u002F\u002Fwww.dfrobot.com\u002Fproduct-2995.html?marketing=690360ffb0f6d\"\u003E\u003Cstrong\u003EBuy Now →\u003C\u002Fstrong\u003E\u003C\u002Fa\u003E\u003C\u002Fp\u003E",onlyTest:d,warehouse:"GLOBAL"}},store:cl},currencys:cB,viewtype:L},serverRendered:o,routePath:"\u002Fdfr0198",config:{_app:{basePath:ap,assetsPath:"\u002F_nuxt\u002F",cdnURL:e}}}}("",0,1,false,null,"wiki","product",121,"wiki_en","Out Of Stock",7102,"fileUrl","All Products,Gravity,Sensors,Temperature &amp; Humidity Sensor","36 64 282",true,"DFR0198","All Products,Arduino,Sensors,Temperature &amp; Humidity Sensor","36 64 277","All","Sensors",7132,"All Products,Arduino,Fermion,Sensors,Temperature &amp; Humidity Sensor","36 64 277 292","ListItem",6.9,"Modules",174,"All Products,Arduino,Gravity,Sensors,Temperature &amp; Humidity Sensor","36 64 277 282","All Products,Fermion,Sensors,Temperature &amp; Humidity Sensor","36 64 292","Inquiry Only","All Products,Boson,STEM Education,Sensors,Temperature &amp; Humidity Sensor","36 64 280 283","Reference","Prototyping & Accessories","_blank","pc","Temperature & Humidity Sensor","DS18B20 Waterproof Temperature Sensor",689,"Waterproof DS18B20 Digital Temperature Sensor for Arduino (IP68, -10°C to +85°C)","All Products,Sensors,Temperature &amp; Humidity Sensor","36 64","Waterproof DS18B20 Sensor for Arduino - IP68 & Versatile Applications | DFRobot Wiki",void 0,"Development Boards","NaN-NaN-NaN NaN:NaN:NaN","Gravity: Analog Capacitive Corrosion Resistant Soil Moisture Sensor for Arduino \u002F Raspberry Pi","Gravity: AHT20 Temperature and Humidity Sensor","Gravity: Analog High Temperature Sensor (30~350°C)","Gravity: CT1780 1-Wire K-Type Thermocouple Amplifier (-270℃ to +1372℃ Temp Range)","TC01 Non-contact 16x4 Pixel Infrared Temperature Sensor",7160,"https:\u002F\u002Fdfimg.dfrobot.com\u002Fwiki\u002F17518\u002FDFR0198_ds8b20-waterproof-temperature-sensor_datasheet_1.0.pdf","https:\u002F\u002Fdfimg.dfrobot.com\u002Fwiki\u002F17518\u002FDFR0198_ds8b20-waterproof-temperature-sensor_library_:DFR0198_ds8b20-waterproof-temperature-sensor_library.zip","Enhance your projects with the Waterproof DS18B20 Sensor, compatible with Arduino. Perfect for smart home, environmental monitoring, and educational use. Explore tutorials and start innovating today!","Discover Versatile DS18B20 Sensor for Arduino - IP68 Protection ?️","0","0.00000000","Angled shot of waterproof DS18B20 temperature sensor with coiled cable and colored wires.-DFRobot product sku:DFR0198 image.","Example Code for Arduino-Temperature Reading","https:\u002F\u002Fwiki.dfrobot.com\u002FDFR0198\u002F#mainimage","https:\u002F\u002Fwiki.dfrobot.com\u002F#organization","DigitalDocument","USD","Others","Kits","Click Me","\u002F","\u002Fcategory-64\u002F","2","Gravity: Waterproof Capacitive Soil Moisture Sensor","RS485 4-in-1 Soil Moisture, Temperature, pH & EC Sensor",158,"DS18B20, temperature sensor, arduino temperature sensor, waterproof temperature sensor, DS18B20 temperature sensor, digital temperature sensor","5V.WV,Arduino IDE.IDE,Temperature & Humidity Sensor.PF,C++.PL,3.3V.WV,Digital.ToS,Other Brands.Brand,Prototyping.Scenario,MP.SL","SHT31 Temperature & Humidity Sensor","Gravity: DHT22 Temperature and Humidity Sensor","Gravity: MLX90614  I2C Non-contact IR Temperature Sensor","Gravity: BME280 Environmental Sensor","Gravity: DHT11 Temperature & Humidity Sensor","Fermion: BME688 AI Environmental Sensor","SHT20 Temperature & Humidity Sensor","Gravity: BME680 Environmental Sensor","Digital Temperature & Humidity","Fermion: SHT40 Temperature & Humidity Sensor","Gravity: Analog LM35 Temperature Sensor","Gravity: High Accuracy Temperature, Humidity, Pressure, Ambient Light and UV Sensor","Gravity: DHT20 Temperature & Humidity Sensor","Fermion: Temperature & Humidity(SHTC3), Pressure(BMP280), Ambient Light(VEML7700) and UV(ML8511) Sensor","Fermion: SHT35 Temperature and Humidity Sensor",1765246489,"Environments.Scenario,3.3V.WV,C++.PL,5V.WV,I2C.ToS,Temperature & Humidity Sensor.PF,Fermion.Brand,Pin.Interface,M+.SL,Arduino IDE.IDE","Gravity: DS18B20 Temperature Sensor","BME680 4-in-1 Environmental Sensor","TS01 Non-Contact Analog Infrared Temperature Sensor (-70℃~270℃)","TS01, IR temperature sensor, infrared temperature sensor, IR sensor, infrared sensor, temperature compensation, IP65, industrial infrared temperature sensor, non contact temperature sensor arduino, temperature measurement, infrared thermometer, infrared sensor arduino","Gravity: SHT30 Temperature & Humidity Sensor","Fermion: SHTC3 Temperature & Humidity Sensor","Fermion: MCP9808 High Accuracy Digital Temperature Sensor","Fermion: AHT20 Temperature and Humidity Sensor","Fermion: STS35 High Accuracy Digital Temperature Sensor","Gravity: MAX31855K K-type High Temperature Sensor","I2C Digital Temperature & Humidity Sensor","RS485 MODBUS-RTU IP68 Soil Temperature & Moisture Sensor","RS485 Soil Temperature, Humidity and EC Sensor","Gravity: Analog Soil Moisture Sensor","MLX90614 IR Thermometer Sensor","Gravity: BME688 Environmental Sensor","Gravity: SHT31-F Temperature and Humidity Sensor","RS485 Soil pH, Moisture, Temperature Monitoring Sensor","Fermion: SHT31 Digital Temperature & Humidity Sensor","Fermion: SHT31-F Temperature and Humidity Sensor","TS01 Non-Contact Analog Infrared Temperature Sensor","Fermion: SHT30 Digital Temperature & Humidity Sensor","BOSON Steam Sensor i6","BOSON Humidity Sensor i18","BOSON Soil Moisture Sensor i16","BOSON Temperature Sensor i11","BOSON Waterproof Temperature Sensor i19","Docs","Tech Specs","Projects","Explore the Waterproof DS18B20 Digital Temperature Sensor for Arduino, featuring IP68 waterproof rating and a temperature range of -10°C to +85°C. Ideal for smart home, environmental monitoring, and educational projects. Learn how to connect and use this sensor with Arduino through tutorials and examples. Discover best practices and comparison with other sensors. Start your project with DS18B20 today!","DS18B20 waterproof sensor, digital temperature sensor, 1-Wire temperature sensor, Arduino temperature sensor, smart home temperature sensor, temperature measurement sensor, connect DS18B20 to Arduino, best waterproof temperature sensor for greenhouse, DS18B20 sensor for smart home automation, DIY electronics enthusiasts, smart home automation developers, environmental monitoring tools, educational electronics kits","DS18B20 Waterproof Sensor ensures reliability for Arduino projects. Discover its versatile applications in smart homes and environmental monitoring.","Datasheet","Library",160,"6.9","690",67,"InStock",{},"project","IoT AI-driven Yogurt Processing &amp; Texture Prediction w\u002F Blynk","Kutluhan Aktar","https:\u002F\u002Fcommunity.dfrobot.com\u002Fmakelog-312996.html",{},"Make a TDS Detector for Water Testing Experiment","Frances","https:\u002F\u002Fcommunity.dfrobot.com\u002Fmakelog-312690.html","This article provides a detailed guide on using Arduino to read temperatures with the DS18S20 sensor, featuring sample code, wiring diagrams, and preparation steps for effective project implementation.","18272","2026-01-17 00:00:00","1. Example Code for Arduino-Temperature Reading","18271","CreativeWork","Person",2,3,"https:\u002F\u002Fwiki.dfrobot.com\u002FDFR0198\u002F#breadcrumb","https:\u002F\u002Fwiki.dfrobot.com\u002F","DFRobot","Organization","og:locale","og:type","og:title","og:description","og:url","og:site_name","og:image","https:\u002F\u002Fdfimg.dfrobot.com\u002Fenshop\u002Fimage\u002Fdata\u002FDFR0198\u002FDFR0198_Main_01_1200x630.jpg.webp","og:image:alt","twitter:card","twitter:site","@wiki","twitter:creator","twitter:title","twitter:description","twitter:image","twitter:image:alt",Array(13),"ESP32-P4, ESP32-C5, ESP32-C6, ESP32-S3, ESP8266 IoT microcontrollers","\u002Ftopic-316.html","pH Sensor, EC sensor, TDS sensor, DO sensor, turbidity sensor, ORP sensor, liquid level sensor","\u002Fcategory-68.html","Liquid Sensors","O2 sensor, CO sensor, CO2 sensor, air quality sensor, weather station, wind speed sensor","\u002Fcategory-85.html","Air Sensors","\u002Fcategory-55.html","Range & Distance Sensors","Raspberry Pi 5, Raspberry Pi 4B, Raspberry Pi Pico 2 W, Raspberry Pi CM4, Beetle RP2040","Raspberry Pi","ESP32-C6, ESP32-S3, ESP8266 IoT microcontrollers","micro:bit","STEM Education",{}));</script><script src="/_nuxt/9e86fd7.js" defer></script><script src="/_nuxt/76bd41d.js" defer></script><script src="/_nuxt/778c53f.js" defer></script><script src="/_nuxt/4aefe03.js" defer></script><script src="/_nuxt/d3ed6e3.js" defer></script>
+  </body>
+</html>
