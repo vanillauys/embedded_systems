@@ -1,5 +1,5 @@
 use esp_idf_svc::hal::delay::FreeRtos;
-use esp_idf_svc::hal::prelude::*;
+use esp_idf_svc::hal::peripherals::Peripherals;
 use log::info;
 
 fn main() -> anyhow::Result<()> {

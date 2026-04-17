@@ -1,6 +1,6 @@
 # Step 1 — Hello World (Serial Output)
 
-**Status:** in progress (project scaffolded, not yet flashed)
+**Status:** ✅ done (2026-04-18)
 **Goal:** Confirm the Xtensa Rust toolchain works, the board enumerates over USB, and log output reaches the host.
 
 ## What we did
@@ -76,8 +76,43 @@ Exit monitor with `Ctrl+]`.
 
 ## What I learned
 
-_Fill in after flashing. Especially: anything surprising, any error I hit, timing of the build, what the first log lines look like._
+### Things that bit me
+1. **`esp_idf_svc::hal::prelude` no longer exists** in `esp-idf-hal` 0.46+. The snippet in `initial_plan.md` was stale. Fixed by importing `Peripherals` explicitly: `use esp_idf_svc::hal::peripherals::Peripherals;`. See [gotchas.md](../gotchas.md).
+2. **`/dev/ttyACM0` permission denied** even though I was in the `dialout` group per `getent`. My graphical session had started before the group was added, so the running shell didn't have it. Rebooting fixed it. `newgrp dialout` in the shell also works as a one-off.
+
+### Build timing
+- First `cargo build --release` compiled the full ESP-IDF C SDK (esp-idf-sys/hal/svc) — about 5–7 min on this machine.
+- Incremental builds after a source change: **~2.5s**.
+- Flash time: ~25s for the 400 KB app.
+
+### Things worth noticing from the boot log
+
+```
+I (227) cpu_start: GPIO 44 and 43 are used as console UART I/O pins
+I (228) cpu_start: cpu freq: 160000000 Hz
+I (237) app_init: Project name:     libespidf
+I (237) app_init: App version:      488ba71         ← git SHA of HEAD
+I (246) app_init: Compile time:     Apr 18 2026 00:03:13
+I (251) app_init: ESP-IDF:          v5.5.3
+I (272) heap_init: At 3FC94D90 len 00054980 (338 KiB): RAM
+I (353) temp_monitor: Hello from ESP32-S3! tick=0
+I (1353) temp_monitor: Hello from ESP32-S3! tick=1
+```
+
+- **`I (353)`** — milliseconds since boot. First tick fires ~350 ms after reset. That's how fast ESP-IDF boots.
+- **`FreeRtos::delay_ms(1000)` is exact** — ticks are spaced to the millisecond (353 → 1353 → 2353 …). Not a busy-wait; the OS scheduler handles it.
+- **App version = commit SHA** (`488ba71`). `embuild` auto-embeds that into the ESP-IDF build. Free provenance on every boot.
+- **Console UART on GPIO 43/44** — those are also the TX/RX LEDs on the board. While ESP-IDF uses them as the serial console, they blink with every log line. If I ever want to reuse them as GPIOs, I'd have to disable UART console in `sdkconfig`.
+- **Heap: 338 KiB RAM + 32 KiB DRAM + 21 KiB + 7 KiB RTCRAM** — plenty for our purposes. PSRAM (8 MB) is available but not used yet.
+- **Flash chip:** `boya` — some cheap flash brand, not Winbond. Not a problem unless it shows up in a bug report somewhere.
+- **Boot message `W (…) i2c: old driver, migrate to i2c_master.h`** — harmless warning from ESP-IDF itself; not our code.
+
+### What this proves
+- Xtensa toolchain produces correct binaries.
+- Board enumerates as `/dev/ttyACM0` via native USB (right USB-C port).
+- `cargo run --release` → flash → monitor is a one-command loop. ✓
+- The Rust `log` crate is wired through `EspLogger` to ESP-IDF's native logging; output is indistinguishable from C-side IDF logs.
 
 ## Next step
 
-[Step 2 — Blink an LED](02-blink-led.md) (not yet written)
+[Step 2 — Blink an LED](02-blink-led.md). Prefer the onboard WS2812B RGB LED on GPIO 48 (requires bridging the "RGB" solder jumper on the board) over an external LED. See [hardware/pinout.md](../hardware/pinout.md).
