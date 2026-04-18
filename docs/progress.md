@@ -4,10 +4,10 @@ Single source of truth for where the project is. Update when finishing a step.
 
 ## Current state
 
-- **Step in progress:** 5 — Wi-Fi captive-portal provisioning (branch `step_05_wifi_captive_portal`, implementation complete, **untested on hardware**).  *(Step 2 still deferred, Step 4 re-wiring still pending.)*
+- **Step in progress:** ✅ Step 5 done (PR #4 open, verified on hardware). *(Step 2 still deferred, Step 4 re-wiring still pending.)*
 - **Project path:** `temp_monitor/` (Cargo project)
-- **Last action:** Service-module refactor merged to `main` (PR #3 → `a46cf05`). Implemented the full captive portal: `wifi/` module is now a directory with `mod.rs` (state machine), `credentials.rs` (NVS), `ap.rs` (SoftAP), `sta.rs` (STA client), `dns.rs` (UDP DNS hijack), `http.rs` (form + save/reboot). `main.rs` enables the service. `sdkconfig.defaults` bumps HTTP stack + lwIP sockets. Build is clean. Full walkthrough in [steps/05-wifi-captive-portal.md](steps/05-wifi-captive-portal.md); concept note at [concepts/captive-portal.md](concepts/captive-portal.md).
-- **Next action:** Flash and test. First boot should expose `PoolMon-XXXX`; phone-join should auto-open the captive portal onto the config form; submitting credentials should reboot into STA mode on the home network. Expect iteration — this is a lot of untested code.
+- **Last action:** Flashed PR #4 on the board. First boot came up in AP mode (`PoolMon-E3D0`). Phone joined, captive portal auto-opened, submitted `Glydehouse` creds, device rebooted, STA connected. Logged: `Wi-Fi STA connected. SSID=Glydehouse IP=192.168.68.68`. RSSI −63 dBm, WPA2-PSK. All 985 lines of previously-untested Rust worked first try.
+- **Next action:** Merge PR #4 to `main`. Then pick Step 8 (HTTPS POST to webhook.site — reuses the Wi-Fi we just built, gives an external "look, data!" moment) or Step 6 (deep sleep). Recommendation: Step 8.
 
 ## Checklist
 
@@ -16,7 +16,7 @@ Single source of truth for where the project is. Update when finishing a step.
 - [ ] 2 — Blink LED (GPIO output)  *(deferred — RGB jumper not bridged, no soldering iron yet)*
 - [x] 3 — DS18B20 read (kit adapter)
 - [ ] 4 — DS18B20 read (bare probe + manual pull-up)  *(pending — just re-wiring, no code change)*
-- [ ] 5 — Wi-Fi connect + captive-portal provisioning  ← _you are here_ (implementation done, awaiting flash test)
+- [x] 5 — Wi-Fi connect + captive-portal provisioning
 - [ ] 6 — Deep sleep loop
 - [ ] 7 — Button wakeup (ext0)
 - [ ] 8 — HTTPS POST to webhook.site
@@ -36,3 +36,4 @@ Single source of truth for where the project is. Update when finishing a step.
 | 2026-04-19 | — | PR #2 (Step 3) squash-merged to `main`. Started service-module refactor: `main.rs` now orchestrates three services — `sensor` (real DS18B20), `wifi` (stub, step 5, esp-idf-svc provisioning), `api` (stub, step 8). Pattern documented in concepts/service-modules.md. |
 | 2026-04-19 | — | Refactor PR #3 merged to `main` (→ `a46cf05`). |
 | 2026-04-19 | 5 | Implemented Step 5 end-to-end: custom captive-portal Wi-Fi provisioning (6 files under `wifi/`). SoftAP `PoolMon-XXXX`, UDP DNS hijack, HTTP form on `/`, POST `/save` writes NVS + reboots. Boot-time state machine: if creds present → STA; else AP + portal. sdkconfig bumps for HTTPD stack + lwIP sockets. Build clean. Not yet flashed. Walkthrough in `steps/05-wifi-captive-portal.md`. |
+| 2026-04-19 | 5 | ✅ Step 5 verified on hardware first-flash. AP came up (`PoolMon-E3D0`), phone provisioned, device rebooted, STA joined `Glydehouse` at IP `192.168.68.68`, RSSI −63 dBm. Two minor transient issues logged: occasional 1-Wire `UnexpectedResponse` during Wi-Fi radio activity (recovers next cycle), and `/favicon.ico` 404s from the browser (harmless). Double `sensor:` prefix in error log is cosmetic. |

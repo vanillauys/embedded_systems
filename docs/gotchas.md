@@ -14,6 +14,14 @@ Append-only log of problems hit and how they were solved. Newest at the top. Gre
 
 ---
 
+## 2026-04-19 — Occasional 1-Wire `UnexpectedResponse` while Wi-Fi is active
+**Symptom:** When the Wi-Fi radio is doing scans / associating / handling HTTP requests, the DS18B20 reader occasionally errors `sensor: UnexpectedResponse` or returns no devices, then self-heals on the next 2 s cycle.
+**Cause:** 1-Wire is bit-banged — each bit slot is 1–60 µs wide and relies on precise `Ets` microsecond delays. The Wi-Fi driver task preempts us occasionally; when it does during a read, the timing window gets stretched and the device either misses a response or returns garbage the library flags as `UnexpectedResponse`.
+**Fix:** None required — the next cycle recovers. If this ever becomes a real problem (e.g. sustained Wi-Fi traffic causing >10% reading loss), pin the sensor task to the core Wi-Fi *isn't* running on (ESP32-S3 has two cores), or switch to the `esp-idf-hal::onewire` driver which uses hardware RMT for bit timing instead of CPU cycles.
+**Why this bit me:** Hadn't considered that Wi-Fi brings real-time constraints into the sensor loop. Before Step 5 the loop ran uninterrupted; now it shares cycles with a live radio stack.
+
+---
+
 ## 2026-04-18 — Intermittent screw-terminal contact on 1-Wire bus
 **Symptom:** After fixing all wiring colours, `bus.reset()` kept returning `Ok(false)` (no presence pulse). The probe was cool, wiring was correct, and the bus was electrically healthy (no `BusNotHigh`). Yet: 90 seconds of `No DS18B20 devices found on bus`, then — after gentle wiggling of one probe wire at its screw terminal — `RESET: presence pulse detected ✓` and clean temperature readings every 2 s.
 **Cause:** One of the three screw-terminal contacts on the DFR0198 adapter wasn't actually clamping the probe's stripped conductor. The wire looked seated, even tugged firmly, but the copper strands weren't reaching the screw.
