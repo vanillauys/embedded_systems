@@ -6,5 +6,6 @@ Standalone notes on Rust or embedded concepts that come up during the build. Eac
 |---|---|---|
 | [one-wire-protocol.md](one-wire-protocol.md) | 1-Wire electrical shape, timing, ROM/function commands | step 3 (DS18B20 kit adapter) |
 | [service-modules.md](service-modules.md) | How `main.rs` is organised around services (sensor / wifi / api) | refactor between step 3 and step 5 |
+| [captive-portal.md](captive-portal.md) | How the "connect, sign-in page pops up" UX actually works — DNS hijack + OS probe URLs + HTTP 302 | step 5 (Wi-Fi provisioning) |
 
-_Future likely entries: `rust-ownership-vs-java.md`, `peripherals-singleton.md`, `rtc-memory-and-deep-sleep.md`, `esp-wifi-provisioning.md`._
+_Future likely entries: `rust-ownership-vs-java.md`, `peripherals-singleton.md`, `rtc-memory-and-deep-sleep.md`._
