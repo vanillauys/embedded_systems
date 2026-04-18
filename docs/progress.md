@@ -4,10 +4,10 @@ Single source of truth for where the project is. Update when finishing a step.
 
 ## Current state
 
-- **Step in progress:** architectural refactor before step 5 (branch `refactor/service-modules`)  *(Step 2 still deferred, Step 4 re-wiring still pending)*
+- **Step in progress:** ✅ Step 5 done (PR #4 open, verified on hardware). *(Step 2 still deferred, Step 4 re-wiring still pending.)*
 - **Project path:** `temp_monitor/` (Cargo project)
-- **Last action:** Step 3 merged to main (PR #2 squashed → `8fb7bc9`). Now refactoring `main.rs` into service modules — `sensor` (real), `wifi` (stub, step 5), `api` (stub, step 8) — so `main()` reads like a Java entry point where each service is explicitly enabled. Build is clean with no warnings. See [concepts/service-modules.md](concepts/service-modules.md).
-- **Next action:** Flash the refactored firmware and confirm identical behaviour to pre-refactor step 3 (same temperature readings every 2 s). Then open PR, merge to main. After that: Step 4 (bare probe wiring, no code change) OR Step 5 (Wi-Fi provisioning).
+- **Last action:** Flashed PR #4 on the board. First boot came up in AP mode (`PoolMon-E3D0`). Phone joined, captive portal auto-opened, submitted `Glydehouse` creds, device rebooted, STA connected. Logged: `Wi-Fi STA connected. SSID=Glydehouse IP=192.168.68.68`. RSSI −63 dBm, WPA2-PSK. All 985 lines of previously-untested Rust worked first try.
+- **Next action:** Merge PR #4 to `main`. Then pick Step 8 (HTTPS POST to webhook.site — reuses the Wi-Fi we just built, gives an external "look, data!" moment) or Step 6 (deep sleep). Recommendation: Step 8.
 
 ## Checklist
 
@@ -15,8 +15,8 @@ Single source of truth for where the project is. Update when finishing a step.
 - [x] 1 — Hello world / Serial output
 - [ ] 2 — Blink LED (GPIO output)  *(deferred — RGB jumper not bridged, no soldering iron yet)*
 - [x] 3 — DS18B20 read (kit adapter)
-- [ ] 4 — DS18B20 read (bare probe + manual pull-up)  ← _you are here_
-- [ ] 5 — Wi-Fi connect + HTTP GET
+- [ ] 4 — DS18B20 read (bare probe + manual pull-up)  *(pending — just re-wiring, no code change)*
+- [x] 5 — Wi-Fi connect + captive-portal provisioning
 - [ ] 6 — Deep sleep loop
 - [ ] 7 — Button wakeup (ext0)
 - [ ] 8 — HTTPS POST to webhook.site
@@ -34,3 +34,6 @@ Single source of truth for where the project is. Update when finishing a step.
 | 2026-04-18 | 2 → 3 | Step 2 deferred: visual inspection confirms the "RGB" solder jumper on the board is not bridged, so GPIO 48 is disconnected from the onboard WS2812B LED. No soldering iron on hand. PR #1 converted to draft. Reordering to Step 3 (DS18B20 kit) since all hardware for it is already on desk. |
 | 2026-04-18 | 3 | ✅ Step 3 complete. DS18B20 reads over 1-Wire on GPIO 4 via DFR0198 kit adapter. Address `8A00001125DC9D28`, 12-bit resolution, cycle ~780 ms. Debug journey: stale `input_output_od` API, `Ds18b20::new` generic-E inference via helper fn, wire-colour mismapping, intermittent screw-terminal contact diagnosed via `bus.reset()` logging + wire wiggle. See gotchas + concepts/one-wire-protocol.md. |
 | 2026-04-19 | — | PR #2 (Step 3) squash-merged to `main`. Started service-module refactor: `main.rs` now orchestrates three services — `sensor` (real DS18B20), `wifi` (stub, step 5, esp-idf-svc provisioning), `api` (stub, step 8). Pattern documented in concepts/service-modules.md. |
+| 2026-04-19 | — | Refactor PR #3 merged to `main` (→ `a46cf05`). |
+| 2026-04-19 | 5 | Implemented Step 5 end-to-end: custom captive-portal Wi-Fi provisioning (6 files under `wifi/`). SoftAP `PoolMon-XXXX`, UDP DNS hijack, HTTP form on `/`, POST `/save` writes NVS + reboots. Boot-time state machine: if creds present → STA; else AP + portal. sdkconfig bumps for HTTPD stack + lwIP sockets. Build clean. Not yet flashed. Walkthrough in `steps/05-wifi-captive-portal.md`. |
+| 2026-04-19 | 5 | ✅ Step 5 verified on hardware first-flash. AP came up (`PoolMon-E3D0`), phone provisioned, device rebooted, STA joined `Glydehouse` at IP `192.168.68.68`, RSSI −63 dBm. Two minor transient issues logged: occasional 1-Wire `UnexpectedResponse` during Wi-Fi radio activity (recovers next cycle), and `/favicon.ico` 404s from the browser (harmless). Double `sensor:` prefix in error log is cosmetic. |
