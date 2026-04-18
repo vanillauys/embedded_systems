@@ -13,3 +13,6 @@ Thumbs.db
 # Datasheet text extractions — the PDFs are the source of truth; .txt files are re-generated
 # with `pdftotext -layout FILE.pdf FILE.txt` as needed. Keep the repo small.
 /docs/hardware/datasheets/*.txt
+
+# graphify (Claude Code knowledge-graph tool) outputs — derived, regeneratable.
+/graphify-out/
