@@ -27,6 +27,11 @@ anyhow = "1"
 esp-idf-svc = { version = "0.52.1", features = ["critical-section", "embassy-time-driver", "embassy-sync"] }
 # Remove `generic-queue-8` if you plan to use `embassy-time` WITH `embassy-executor`
 embassy-time = { version = "0.5", features = ["generic-queue-8"] }
+# Drives WS2812B RGB LED via the ESP32 RMT peripheral.
+# Git pin (not crates.io) — the 0.13 release on crates.io pins
+# `esp-idf-sys = "^0.36"` which conflicts with our project's 0.37.x (links=esp_idf).
+# 0.14 on git HEAD bumps to 0.37. Revisit after 0.14 publishes on crates.io.
+ws2812-esp32-rmt-driver = { git = "https://github.com/cat-in-136/ws2812-esp32-rmt-driver" }
 
 [build-dependencies]
 embuild = "0.33"
