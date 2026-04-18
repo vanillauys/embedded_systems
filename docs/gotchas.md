@@ -14,6 +14,22 @@ Append-only log of problems hit and how they were solved. Newest at the top. Gre
 
 ---
 
+## 2026-04-18 — Intermittent screw-terminal contact on 1-Wire bus
+**Symptom:** After fixing all wiring colours, `bus.reset()` kept returning `Ok(false)` (no presence pulse). The probe was cool, wiring was correct, and the bus was electrically healthy (no `BusNotHigh`). Yet: 90 seconds of `No DS18B20 devices found on bus`, then — after gentle wiggling of one probe wire at its screw terminal — `RESET: presence pulse detected ✓` and clean temperature readings every 2 s.
+**Cause:** One of the three screw-terminal contacts on the DFR0198 adapter wasn't actually clamping the probe's stripped conductor. The wire looked seated, even tugged firmly, but the copper strands weren't reaching the screw.
+**Fix:** Back the screw all the way out, strip a fresh ~5 mm, twist the strands tight, push all the way in, re-tighten firmly. Tug-test again.
+**Why this bit me:** Intermittent hardware faults produce partial-working / partial-not symptoms that look like software bugs. Adding an explicit `bus.reset()` diagnostic (`presence pulse detected ✓` vs `no presence pulse`) plus a physical wiggle test was what surfaced this as "flickers to working when I move that wire" — classic bad contact.
+
+---
+
+## 2026-04-18 — Misread DFRobot JST cable mapping at first glance
+**Symptom:** First run of step 3 returned `No DS18B20 devices found on bus`. After re-wiring (swapping what I thought needed swapping) the next run returned `BusNotHigh` — DATA pin stuck LOW.
+**Cause:** Mis-described the JST cable's wire → silkscreen-label mapping on the first look. I thought black = DATA / red = VCC / green = GND. Actually the cable is **standard**: **black = GND (−), red = VCC (+), green = DATA (D)**. The second wiring crossed DATA to GND, producing `BusNotHigh`.
+**Fix:** Green → GPIO 4, red → 3V3, black → GND. The probe-side screw terminals are separate and unchanged: yellow → A (D), red → B (+), black → C (−).
+**Why this bit me:** The silkscreen labels on the adapter (`D`, `+`, `−`) are the only ground truth. Wire colours are a vendor convention that I should verify rather than guess. Two tight, bright-lit looks at the board beat one rushed glance every time.
+
+---
+
 ## 2026-04-18 — `/dev/ttyACM0` permission denied even though I'm in `dialout`
 **Symptom:**
 ```
