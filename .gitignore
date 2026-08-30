@@ -16,3 +16,7 @@ Thumbs.db
 
 # graphify (Claude Code knowledge-graph tool) outputs — derived, regeneratable.
 /graphify-out/
+
+# Local agent and IDE state
+.claude/
+.superpowers/
